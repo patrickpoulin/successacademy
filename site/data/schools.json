@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-11T21:47:29.013653+00:00",
+ "generated_at": "2026-11-11T21:54:28.087527+00:00",
  "sources": {
   "lcgms": {
    "label": "NYC DOE LCGMS school list (current)",
@@ -9,7 +9,7 @@
    "count": 290,
    "historical": false,
    "scope": null,
-   "fetched_at": "2026-11-11T21:47:03.024668+00:00"
+   "fetched_at": "2026-11-11T21:49:06.677023+00:00"
   },
   "opendata": {
    "label": "NYC Open Data school locations (2019-20 snapshot)",
@@ -19,17 +19,18 @@
    "count": 265,
    "historical": true,
    "scope": null,
-   "fetched_at": "2026-11-11T21:47:12.575321+00:00"
+   "fetched_at": "2026-11-11T21:49:12.739338+00:00"
   },
   "nysed": {
    "label": "NYSED data site (state school list)",
    "short": "NYSED",
    "url": "https://data.nysed.gov/lists.php?type=school",
    "ok": true,
-   "count": 151,
+   "count": 213,
    "historical": false,
    "scope": null,
-   "fetched_at": "2026-11-11T21:47:20.528203+00:00"
+   "fetched_at": "2026-11-11T21:49:18.143331+00:00",
+   "partial": true
   },
   "suny": {
    "label": "SUNY Charter Schools Institute",
@@ -39,7 +40,7 @@
    "count": 195,
    "historical": false,
    "scope": "SUNY Trustees",
-   "fetched_at": "2026-11-11T21:47:25.235771+00:00"
+   "fetched_at": "2026-11-11T21:54:23.109066+00:00"
   }
  },
  "schools": [
@@ -134,16 +135,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Achievement First Apollo Charter School",
     "opendata": "Achievement First Apollo Charter School",
+    "nysed": "Achievement First Apollo Cs",
     "suny": "Achievement First Apollo Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "38400010680",
@@ -160,15 +161,17 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Achievement First Aspire Charter School",
     "opendata": "Achievement First Aspire Charter School",
+    "nysed": "Achievement First Aspire Cs",
     "suny": "Achievement First Aspire Charter School"
    },
    "issues": [
-    "Not listed by NYSED"
+    "BEDS code differs: DOE 38400010680; NYSED 331900860993"
    ]
   },
   {
@@ -186,16 +189,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Achievement First Brownsville Charter School",
     "opendata": "Achievement First Brownsville Charter School",
+    "nysed": "Achievement First Brownsville Cs",
     "suny": "Achievement First Brownsville Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "333200860906",
@@ -212,16 +215,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Achievement First Bushwick Charter School",
     "opendata": "Achievement First Bushwick Charter School",
+    "nysed": "Achievement First Bushwick Cs",
     "suny": "Achievement First Bushwick Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331700860879",
@@ -238,16 +241,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Achievement First Crown Heights Charter School",
     "opendata": "Achievement First Crown Heights Charter School",
+    "nysed": "Achievement First Crown Heights",
     "suny": "Achievement First Crown Heights Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331900860880",
@@ -264,16 +267,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Achievement First East New York Charter School",
     "opendata": "Achievement First East New York Charter School",
+    "nysed": "Achievement First East Ny Cs",
     "suny": "Achievement First East New York Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331300860902",
@@ -290,16 +293,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Achievement First Endeavor Charter School",
     "opendata": "Achievement First Endeavor Charter School",
+    "nysed": "Achievement First Endeavor Cs",
     "suny": "Achievement First Endeavor Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331600861082",
@@ -315,14 +318,16 @@
    "authorizer": "SUNY Trustees",
    "in": {
     "lcgms": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Achievement First Legacy Charter School",
+    "nysed": "Achievement First Legacy Cs",
     "suny": "Achievement First Legacy Charter School"
    },
    "issues": [
-    "Not listed by NYSED"
+    "borough differs: DOE Queens; NYSED Brooklyn; SUNY Queens"
    ]
   },
   {
@@ -373,9 +378,7 @@
     "opendata": "Achievement First North Brooklyn Prep Charter Scho",
     "suny": "Achievement First North Brooklyn Preparatory Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331700861086",
@@ -516,14 +519,14 @@
    "grades": "0K,01,02,03,04,05",
    "authorizer": null,
    "in": {
-    "lcgms": true
+    "lcgms": true,
+    "nysed": true
    },
    "names": {
-    "lcgms": "American Dream Charter School II"
+    "lcgms": "American Dream Charter School II",
+    "nysed": "American Dream Cs Ii"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "atmosphere",
@@ -544,7 +547,7 @@
     "suny": "Atmosphere Academy Public Charter School"
    },
    "issues": [
-    "Not listed by DOE, NYSED"
+    "Not listed by DOE"
    ]
   },
   {
@@ -595,53 +598,7 @@
     "opendata": "Beginning with Children Charter School II",
     "suny": "Beginning with Children Charter School II"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
-  },
-  {
-   "id": "beginning-with-chldrn",
-   "name": "Beginning With Chldrn Charter School",
-   "beds": null,
-   "dbn": null,
-   "address": null,
-   "borough": "Brooklyn",
-   "zip": null,
-   "lat": null,
-   "lon": null,
-   "grades": null,
-   "authorizer": null,
-   "in": {
-    "nysed": true
-   },
-   "names": {
-    "nysed": "Beginning With Chldrn Charter School"
-   },
-   "issues": [
-    "Not listed by DOE"
-   ]
-  },
-  {
-   "id": "believe-southside-sch",
-   "name": "Believe Southside Charter High Sch",
-   "beds": null,
-   "dbn": null,
-   "address": null,
-   "borough": "Brooklyn",
-   "zip": null,
-   "lat": null,
-   "lon": null,
-   "grades": null,
-   "authorizer": null,
-   "in": {
-    "nysed": true
-   },
-   "names": {
-    "nysed": "Believe Southside Charter High Sch"
-   },
-   "issues": [
-    "Not listed by DOE"
-   ]
+   "issues": []
   },
   {
    "id": "320800861143",
@@ -689,9 +646,7 @@
     "lcgms": "Bridge Preparatory Charter School",
     "opendata": "Bridge Preparatory Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "321000861160",
@@ -732,16 +687,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Brilla College Preparatory Charter School",
     "opendata": "Brilla College Prep Charter School",
+    "nysed": "Brilla College Prep Cs",
     "suny": "Brilla College Preparatory Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "321000861161",
@@ -809,15 +764,15 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Bronx Academy of Promise Charter School",
-    "opendata": "Bronx Academy of Promise Charter School"
+    "opendata": "Bronx Academy of Promise Charter School",
+    "nysed": "Bronx Academy Of Promise Cs"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "320800861155",
@@ -833,15 +788,15 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Bronx Arts and Science Charter School",
-    "opendata": "Bronx Arts and Science Charter School"
+    "opendata": "Bronx Arts and Science Charter School",
+    "nysed": "Bronx Arts And Science Cs"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "321100860855",
@@ -857,15 +812,15 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Bronx Charter School for Better Learning",
-    "opendata": "Bronx Charter School for Better Learning"
+    "opendata": "Bronx Charter School for Better Learning",
+    "nysed": "Bronx Cs-Better Learning"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "bronx-better-learning",
@@ -886,7 +841,7 @@
     "suny": "Bronx Charter School for Better Learning"
    },
    "issues": [
-    "Not listed by DOE, NYSED"
+    "Not listed by DOE"
    ]
   },
   {
@@ -908,7 +863,7 @@
     "suny": "Bronx Charter School for Better Learning II"
    },
    "issues": [
-    "Not listed by DOE, NYSED"
+    "Not listed by DOE"
    ]
   },
   {
@@ -926,16 +881,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Bronx Charter School for Excellence",
     "opendata": "Bronx Charter School for Excellence",
+    "nysed": "Bronx Cs For Excellence",
     "suny": "Bronx Charter School for Excellence"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "321100861103",
@@ -952,16 +907,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Bronx Charter School for Excellence 2",
     "opendata": "Bronx Charter School for Excellence II",
+    "nysed": "Bronx Cs For Excellence 2",
     "suny": "Bronx Charter School for Excellence 2"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "321100861115",
@@ -1056,16 +1011,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Bronx Charter School for Excellence 6",
     "opendata": "Girls Preparatory Charter School of the Bronx",
+    "nysed": "Bronx Cs For Excellence 6",
     "suny": "Bronx Charter School for Excellence 6"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "320700860994",
@@ -1082,16 +1037,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Bronx Charter School for Excellence 7",
     "opendata": "Boys Preparatory Charter School of New York",
+    "nysed": "Bronx Cs For Excellence 7",
     "suny": "Bronx Charter School for Excellence 7"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "320700861179",
@@ -1107,14 +1062,16 @@
    "authorizer": "SUNY Trustees",
    "in": {
     "lcgms": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Bronx Charter School for Excellence 8",
+    "nysed": "Bronx Cs For Excellence 8",
     "suny": "Bronx Charter School for Excellence 8"
    },
    "issues": [
-    "Not listed by NYSED"
+    "BEDS code differs: DOE 320700861179; NYSED 321000861179"
    ]
   },
   {
@@ -1132,16 +1089,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Bronx Charter School for Excellence 9",
     "opendata": "Girls Preparatory Charter School of New York",
+    "nysed": "Bronx Cs For Excellence 9",
     "suny": "Bronx Charter School for Excellence 9"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "320800860846",
@@ -1205,15 +1162,15 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Bronx Global Learning Institute for Girls Charter School",
-    "opendata": "Bronx Global Learning Institute for Girls Charter"
+    "opendata": "Bronx Global Learning Institute for Girls Charter",
+    "nysed": "Bglig-Shirley Rodriguez-Remeneski Cs"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "320900860807",
@@ -1389,9 +1346,7 @@
     "opendata": "Brooklyn Emerging Leaders Academy",
     "suny": "Brooklyn Emerging Leaders Academy Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331600860847",
@@ -1415,9 +1370,7 @@
     "opendata": "Brooklyn Excelsior Charter School",
     "suny": "Brooklyn Excelsior Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331300861063",
@@ -1465,9 +1418,7 @@
     "opendata": "The International Charter School of New York",
     "suny": "Brooklyn Prospect Charter School Bed-Stuy Clinton Hill Campus"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331300861077",
@@ -1491,9 +1442,7 @@
     "opendata": "Success Academy Charter School - Rosedale - New Yo",
     "suny": "Brooklyn Prospect Charter School Downtown Campus"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331500861162",
@@ -1517,9 +1466,7 @@
     "opendata": "Brooklyn Prospect Charter School 15.2",
     "suny": "Brooklyn Prospect Charter School Sunset Yards Campus"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331800860935",
@@ -1543,9 +1490,7 @@
     "opendata": "Brooklyn Prospect Charter School",
     "suny": "Brooklyn Prospect Charter School Windsor Terrace Campus"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331500861156",
@@ -1693,9 +1638,7 @@
     "opendata": "Brownsville Collegiate Charter School",
     "suny": "Brownsville Collegiate Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "333200860987",
@@ -1763,15 +1706,15 @@
    "authorizer": "SUNY Trustees",
    "in": {
     "lcgms": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Capital Preparatory Bronx Charter School",
+    "nysed": "Capital Preparatory Bronx Cs",
     "suny": "Capital Preparatory Bronx Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310500861081",
@@ -1788,16 +1731,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Capital Preparatory Harlem Charter School",
     "opendata": "Capital Preparatory (CP) Harlem Charter School",
+    "nysed": "Capital Prep (Cp) Harlem Cs",
     "suny": "Capital Preparatory Harlem Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "321000861130",
@@ -1814,16 +1757,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Cardinal McCloskey Community Charter School",
     "opendata": "Cardinal McCloskey Community Charter School",
+    "nysed": "Cardinal Mccloskey Community Cs",
     "suny": "Cardinal McCloskey Community Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "332200861050",
@@ -1873,9 +1816,7 @@
     "opendata": "Central Queens Academy Charter School",
     "suny": "Central Queens Academy Charter School II"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "342700860990",
@@ -1915,15 +1856,15 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Charter High School for Law and Social Justice",
-    "opendata": "Charter High School for Law and Social Justice"
+    "opendata": "Charter High School for Law and Social Justice",
+    "nysed": "Cs For Law And Social Justice"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "321200861026",
@@ -1940,16 +1881,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Children's Aid College Preparatory Charter School",
     "opendata": "Children's Aid College Prep Charter School",
+    "nysed": "Children'S Aid College Prep Cs",
     "suny": "Children's Aid College Prep Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "320700861005",
@@ -1965,13 +1906,11 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true,
-    "nysed": true
+    "opendata": true
    },
    "names": {
     "lcgms": "Choice Charter School",
-    "opendata": "New York City Montessori Charter School",
-    "nysed": "Choice Charter School"
+    "opendata": "New York City Montessori Charter School"
    },
    "issues": []
   },
@@ -1995,9 +1934,7 @@
     "lcgms": "Collegiate Academy for Mathematics and Personal Awareness Charter School",
     "opendata": "Collegiate Academy for Math and Personal Awareness"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331300860810",
@@ -2021,9 +1958,7 @@
     "opendata": "Community Partnership Charter School",
     "suny": "Community Partnership Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331300860893",
@@ -2095,9 +2030,7 @@
     "opendata": "Coney Island Preparatory Public Charter School",
     "suny": "Coney Island Preparatory Public Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "320700861145",
@@ -2143,9 +2076,7 @@
     "lcgms": "Cultural Arts Academy Charter School At Spring Creek",
     "opendata": "The Cultural Arts Academy at Spring Creek Charter"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331900861131",
@@ -2169,9 +2100,7 @@
     "opendata": "Cypress Hills Ascend Charter School",
     "suny": "Cypress Hills Ascend Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310500860894",
@@ -2214,16 +2143,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Democracy Preparatory Endurance Charter School",
     "opendata": "Democracy Prep Endurance Charter School",
+    "nysed": "Democracy Prep Endurance Cs",
     "suny": "Democracy Prep Endurance Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310500860989",
@@ -2265,15 +2194,15 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Dr. Richard Izquierdo Health and Science Charter School",
-    "opendata": "Dr. Richard Izquierdo Health and Science Charter S"
+    "opendata": "Dr. Richard Izquierdo Health and Science Charter S",
+    "nysed": "Dr R Izquierdo Health/Science Cs"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310400860919",
@@ -2365,15 +2294,15 @@
    "authorizer": "SUNY Trustees",
    "in": {
     "lcgms": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Earl Monroe New Renaissance Basketball Charter School",
+    "nysed": "E Monroe New Renaissance Basketball",
     "suny": "Earl Monroe New Renaissance Basketball Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "353100861136",
@@ -2421,9 +2350,7 @@
     "opendata": "East Brooklyn Ascend Charter School",
     "suny": "East Brooklyn Ascend Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331800861165",
@@ -2466,15 +2393,17 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "East Harlem Scholars Academy Charter School",
     "opendata": "East Harlem Scholars Academy Charter School",
+    "nysed": "East Harlem Scholars Academy Cs Ii",
     "suny": "East Harlem Scholars Academy Charter School II"
    },
    "issues": [
-    "Not listed by NYSED"
+    "BEDS code differs: DOE 310400861046; NYSED 310400860995"
    ]
   },
   {
@@ -2497,9 +2426,7 @@
     "lcgms": "Edmund W. Gordon Brooklyn Laboratory Charter School",
     "opendata": "Edmund W. Gordon Brooklyn Laboratory Charter Schoo"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "342400861133",
@@ -2576,28 +2503,6 @@
    "issues": []
   },
   {
-   "id": "ethical-community-scho",
-   "name": "Ethical Community Charter Scho (The)",
-   "beds": null,
-   "dbn": null,
-   "address": null,
-   "borough": "Brooklyn",
-   "zip": null,
-   "lat": null,
-   "lon": null,
-   "grades": null,
-   "authorizer": null,
-   "in": {
-    "nysed": true
-   },
-   "names": {
-    "nysed": "Ethical Community Charter Scho (The)"
-   },
-   "issues": [
-    "Not listed by DOE"
-   ]
-  },
-  {
    "id": "evergreen",
    "name": "EverGreen Charter School",
    "beds": null,
@@ -2615,9 +2520,7 @@
    "names": {
     "lcgms": "EverGreen Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331700860841",
@@ -2662,7 +2565,7 @@
     "suny": "Explore Charter School - Canarsie"
    },
    "issues": [
-    "Not listed by DOE, NYSED"
+    "Not listed by DOE"
    ]
   },
   {
@@ -2684,7 +2587,7 @@
     "suny": "Explore Charter School - Crown Heights"
    },
    "issues": [
-    "Not listed by DOE, NYSED"
+    "Not listed by DOE"
    ]
   },
   {
@@ -2706,7 +2609,7 @@
     "suny": "Explore Charter School - Flatbush"
    },
    "issues": [
-    "Not listed by DOE, NYSED"
+    "Not listed by DOE"
    ]
   },
   {
@@ -2746,15 +2649,13 @@
    "grades": "0K, 01, 02, 03, 04, 05, 06, 07, 08",
    "authorizer": null,
    "in": {
-    "opendata": true,
-    "nysed": true
+    "opendata": true
    },
    "names": {
-    "opendata": "Explore Exceed Charter School",
-    "nysed": "Explore Exceed Charter School"
+    "opendata": "Explore Exceed Charter School"
    },
    "issues": [
-    "Not listed by DOE"
+    "Only in the 2019-20 list; may have closed or been renamed"
    ]
   },
   {
@@ -2782,28 +2683,6 @@
    "issues": []
   },
   {
-   "id": "fahari",
-   "name": "Fahari Academy Charter School",
-   "beds": null,
-   "dbn": null,
-   "address": null,
-   "borough": "Brooklyn",
-   "zip": null,
-   "lat": null,
-   "lon": null,
-   "grades": null,
-   "authorizer": null,
-   "in": {
-    "nysed": true
-   },
-   "names": {
-    "nysed": "Fahari Academy Charter School"
-   },
-   "issues": [
-    "Not listed by DOE"
-   ]
-  },
-  {
    "id": "320700861028",
    "name": "Family Life Academy Charter School II",
    "beds": "320700861028",
@@ -2824,7 +2703,7 @@
    "names": {
     "lcgms": "Family Life Academy Charter School",
     "opendata": "Family Life Academy Charter School",
-    "nysed": "Family Life Academy Charter",
+    "nysed": "Family Life Academy Cs Ii",
     "suny": "Family Life Academy Charter Schools High School"
    },
    "issues": [
@@ -2846,16 +2725,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Family Life Academy Charter School III",
     "opendata": "Family Life Academy Charter School III",
+    "nysed": "Family Life Academy Cs Iii",
     "suny": "Family Life Academy Charter School III"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331700861164",
@@ -2879,9 +2758,7 @@
     "opendata": "Lefferts Gardens Ascend Charter School",
     "suny": "Flatbush Ascend Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "342400861113",
@@ -2905,9 +2782,7 @@
     "opendata": "Forte Preparatory Academy Charter School",
     "suny": "Forte Preparatory Academy Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310300860881",
@@ -2923,15 +2798,15 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Future Leaders Institute Charter School",
-    "opendata": "Future Leaders Institute Charter School"
+    "opendata": "Future Leaders Institute Charter School",
+    "nysed": "Future Leaders Institute Cs"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310500861012",
@@ -2972,16 +2847,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Grand Concourse Academy Charter School",
     "opendata": "Grand Concourse Charter School",
+    "nysed": "Grand Concourse Academy Cs",
     "suny": "Grand Concourse Academy Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310200861055",
@@ -2997,15 +2872,15 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Great Oaks Kathleen Sherry Charter School",
-    "opendata": "Great Oaks Charter School"
+    "opendata": "Great Oaks Charter School",
+    "nysed": "Great Oaks Kathleen Sherry Cs"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "343000860952",
@@ -3030,28 +2905,6 @@
     "nysed": "Growing Up Green Charter School"
    },
    "issues": []
-  },
-  {
-   "id": "harbor-sci-arts",
-   "name": "Harbor Sci & Arts Charter School",
-   "beds": null,
-   "dbn": null,
-   "address": null,
-   "borough": "Manhattan",
-   "zip": null,
-   "lat": null,
-   "lon": null,
-   "grades": null,
-   "authorizer": null,
-   "in": {
-    "nysed": true
-   },
-   "names": {
-    "nysed": "Harbor Sci & Arts Charter School"
-   },
-   "issues": [
-    "Not listed by DOE"
-   ]
   },
   {
    "id": "310400860812",
@@ -3089,14 +2942,16 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Harlem Children's Zone Promise Academy II Charter School",
-    "opendata": "Harlem Children's Zone Promise Academy II Charter"
+    "opendata": "Harlem Children's Zone Promise Academy II Charter",
+    "nysed": "Harlem Children'S Zone Promise"
    },
    "issues": [
-    "Not listed by NYSED"
+    "BEDS code differs: DOE 310500860864; NYSED 310500860886"
    ]
   },
   {
@@ -3188,16 +3043,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Harlem Village Academy East Charter School",
     "opendata": "Harlem Village Academy East Charter School",
+    "nysed": "Harlem Village Academy East Cs",
     "suny": "Harlem Village Academy East Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310500860848",
@@ -3214,16 +3069,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Harlem Village Academy North Charter School",
     "opendata": "Harlem Village Academy West Charter School",
+    "nysed": "Harlem Village Acad North Cs",
     "suny": "Harlem Village Academy North Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310500861149",
@@ -3240,16 +3095,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Harlem Village Academy West Charter School",
     "opendata": "Harlem Village Academy West 2 Charter School",
+    "nysed": "Harlem Village Acad West Cs",
     "suny": "Harlem Village Academy West Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "320900860823",
@@ -3264,15 +3119,13 @@
    "grades": "0K, 01, 02, 03, 04, 05, 06, 07, 08",
    "authorizer": null,
    "in": {
-    "opendata": true,
-    "nysed": true
+    "opendata": true
    },
    "names": {
-    "opendata": "Harriet Tubman Charter School",
-    "nysed": "Harriet Tubman Charter School"
+    "opendata": "Harriet Tubman Charter School"
    },
    "issues": [
-    "Not listed by DOE"
+    "Only in the 2019-20 list; may have closed or been renamed"
    ]
   },
   {
@@ -3321,9 +3174,7 @@
     "lcgms": "Hebrew Language Academy Charter School",
     "opendata": "Hebrew Language Academy Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "332100861123",
@@ -3345,9 +3196,7 @@
     "lcgms": "Hebrew Language Academy Charter School 2",
     "opendata": "Hebrew Language Academy Charter School 2"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "320700860703",
@@ -3362,15 +3211,13 @@
    "grades": "0K, 01, 02, 03, 04, 05",
    "authorizer": null,
    "in": {
-    "opendata": true,
-    "nysed": true
+    "opendata": true
    },
    "names": {
-    "opendata": "Heketi Community Charter School",
-    "nysed": "Heketi Community Charter School"
+    "opendata": "Heketi Community Charter School"
    },
    "issues": [
-    "Not listed by DOE"
+    "Only in the 2019-20 list; may have closed or been renamed"
    ]
   },
   {
@@ -3393,9 +3240,7 @@
     "lcgms": "Hellenic Classical Charter School",
     "opendata": "Hellenic Classical Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "353100861175",
@@ -3417,9 +3262,7 @@
     "lcgms": "Hellenic Classical Charter School - Staten Island",
     "opendata": "Hellenic Classical Charter School - Staten Island"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331900860972",
@@ -3441,9 +3284,7 @@
     "lcgms": "Hyde Leadership Charter School - Brooklyn",
     "opendata": "Hyde Leadership Charter School- Brooklyn"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "320900860835",
@@ -3654,28 +3495,6 @@
    ]
   },
   {
-   "id": "innovate-manhattan",
-   "name": "Innovate Manhattan Charter School",
-   "beds": null,
-   "dbn": null,
-   "address": null,
-   "borough": "Manhattan",
-   "zip": null,
-   "lat": null,
-   "lon": null,
-   "grades": null,
-   "authorizer": null,
-   "in": {
-    "nysed": true
-   },
-   "names": {
-    "nysed": "Innovate Manhattan Charter School"
-   },
-   "issues": [
-    "Not listed by DOE"
-   ]
-  },
-  {
    "id": "310400860968",
    "name": "Innovation Charter High School",
    "beds": "310400860968",
@@ -3717,9 +3536,7 @@
    "names": {
     "lcgms": "Intellectus Preparatory Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "321000860904",
@@ -3748,28 +3565,6 @@
    "issues": []
   },
   {
-   "id": "invictus-preparatory",
-   "name": "Invictus Preparatory Charter School",
-   "beds": null,
-   "dbn": null,
-   "address": null,
-   "borough": "Brooklyn",
-   "zip": null,
-   "lat": null,
-   "lon": null,
-   "grades": null,
-   "authorizer": null,
-   "in": {
-    "nysed": true
-   },
-   "names": {
-    "nysed": "Invictus Preparatory Charter School"
-   },
-   "issues": [
-    "Not listed by DOE"
-   ]
-  },
-  {
    "id": "310600860966",
    "name": "Inwood Academy for Leadership Charter School",
    "beds": "310600860966",
@@ -3783,15 +3578,15 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Inwood Academy for Leadership Charter School",
-    "opendata": "Inwood Academy for Leadership Charter School"
+    "opendata": "Inwood Academy for Leadership Charter School",
+    "nysed": "Inwood Acad For Leadership Cs"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331800861146",
@@ -3831,15 +3626,15 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "John V. Lindsay Wildcat Academy Charter School",
-    "opendata": "John V. Lindsay Wildcat Academy Charter School"
+    "opendata": "John V. Lindsay Wildcat Academy Charter School",
+    "nysed": "John V Lindsay Wildcat Academy Cs"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "353100860959",
@@ -3878,15 +3673,13 @@
    "grades": "04, 05, 06, 07, 08",
    "authorizer": null,
    "in": {
-    "opendata": true,
-    "nysed": true
+    "opendata": true
    },
    "names": {
-    "opendata": "Key Collegiate Charter School",
-    "nysed": "Key Collegiate Charter School"
+    "opendata": "Key Collegiate Charter School"
    },
    "issues": [
-    "Not listed by DOE"
+    "Only in the 2019-20 list; may have closed or been renamed"
    ]
   },
   {
@@ -3980,7 +3773,7 @@
     "suny": "KIPP Beyond Charter School"
    },
    "issues": [
-    "Not listed by DOE, NYSED"
+    "Not listed by DOE"
    ]
   },
   {
@@ -4102,16 +3895,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "KIPP NYC Washington Heights Academy Charter School",
     "opendata": "KIPP Washington Heights Middle School",
+    "nysed": "Kipp Nyc Washington Heights Academy",
     "suny": "KIPP NYC Washington Heights Academy Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "kipp-s-t-r-college-prep",
@@ -4132,7 +3925,7 @@
     "suny": "KIPP S.T.A.R. College Prep Charter School"
    },
    "issues": [
-    "Not listed by DOE, NYSED"
+    "Not listed by DOE"
    ]
   },
   {
@@ -4149,15 +3942,15 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "KIPP S.T.A.R. College Preparatory Charter School",
-    "opendata": "KIPP STAR College Prep Charter School"
+    "opendata": "KIPP STAR College Prep Charter School",
+    "nysed": "Kipp Star College Prep Cs"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331700861199",
@@ -4179,9 +3972,7 @@
     "lcgms": "Kwenda Collegiate Girls Charter School",
     "suny": "Kwenda Collegiate Girls Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331600860924",
@@ -4250,7 +4041,7 @@
     "suny": "Lamad Arverne Academy Charter School"
    },
    "issues": [
-    "Not listed by DOE, NYSED"
+    "Not listed by DOE"
    ]
   },
   {
@@ -4273,9 +4064,7 @@
     "lcgms": "Launch Expeditionary Learning Charter School",
     "opendata": "Launch Expeditionary Learning Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "320800860903",
@@ -4292,16 +4081,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Leaders In Our Neighborhood Charter School",
     "opendata": "Hyde Leadership Charter School",
+    "nysed": "Leaders In Our Neighborhood Cs",
     "suny": "Leaders in Our Neighborhood Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331500861158",
@@ -4323,31 +4112,7 @@
     "lcgms": "LEEP Dual Language Academy Charter School",
     "opendata": "LEEP Dual Language Academy"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
-  },
-  {
-   "id": "lefferts-gardens",
-   "name": "Lefferts Gardens Charter School",
-   "beds": null,
-   "dbn": null,
-   "address": null,
-   "borough": "Brooklyn",
-   "zip": null,
-   "lat": null,
-   "lon": null,
-   "grades": null,
-   "authorizer": null,
-   "in": {
-    "nysed": true
-   },
-   "names": {
-    "nysed": "Lefferts Gardens Charter School"
-   },
-   "issues": [
-    "Not listed by DOE"
-   ]
+   "issues": []
   },
   {
    "id": "320700861114",
@@ -4364,16 +4129,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Legacy College Preparatory Charter School",
     "opendata": "Legacy College Preparatory",
+    "nysed": "Legacy College Preparatory Cs",
     "suny": "Legacy College Preparatory Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310100860873",
@@ -4395,7 +4160,7 @@
    "names": {
     "lcgms": "Manhattan Charter School",
     "opendata": "Manhattan Charter School",
-    "nysed": "Manhattan Charter School Ii"
+    "nysed": "Manhattan Charter School"
    },
    "issues": []
   },
@@ -4418,7 +4183,7 @@
     "suny": "Math, Engineering, and Science Academy (MESA) Charter High School: South Brooklyn"
    },
    "issues": [
-    "Not listed by DOE, NYSED"
+    "Not listed by DOE"
    ]
   },
   {
@@ -4467,9 +4232,7 @@
     "opendata": "Merrick Academy - Queens Public Charter School",
     "suny": "Merrick Academy - Queens Public Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "342400861048",
@@ -4516,7 +4279,7 @@
     "suny": "Minisink Charter School"
    },
    "issues": [
-    "Not listed by DOE, NYSED"
+    "Not listed by DOE"
    ]
   },
   {
@@ -4581,15 +4344,15 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Neighborhood Charter School of Harlem",
-    "opendata": "Neighborhood Charter School of Harlem"
+    "opendata": "Neighborhood Charter School of Harlem",
+    "nysed": "Neighborhood Cs Of Harlem"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "320700861137",
@@ -4605,15 +4368,15 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Neighborhood Charter School: Bronx",
-    "opendata": "Neighborhood Charter School: Bronx"
+    "opendata": "Neighborhood Charter School: Bronx",
+    "nysed": "Neighborhood Cs-Bronx"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331800861057",
@@ -4635,9 +4398,7 @@
     "lcgms": "New American Academy Charter School",
     "opendata": "New American Academy Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331500861016",
@@ -4710,28 +4471,6 @@
     "nysed": "New Heights Academy Charter School"
    },
    "issues": []
-  },
-  {
-   "id": "hope",
-   "name": "New Hope Academy Charter School",
-   "beds": null,
-   "dbn": null,
-   "address": null,
-   "borough": "Brooklyn",
-   "zip": null,
-   "lat": null,
-   "lon": null,
-   "grades": null,
-   "authorizer": null,
-   "in": {
-    "nysed": true
-   },
-   "names": {
-    "nysed": "New Hope Academy Charter School"
-   },
-   "issues": [
-    "Not listed by DOE"
-   ]
   },
   {
    "id": "353100861083",
@@ -4874,7 +4613,7 @@
     "suny": "Next Generation Charter School"
    },
    "issues": [
-    "Not listed by DOE, NYSED"
+    "Not listed by DOE"
    ]
   },
   {
@@ -4916,16 +4655,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Nuasin Next Generation Charter School",
     "opendata": "Metropolitan Lighthouse Charter School",
+    "nysed": "Nuasin Next Generation Cs",
     "suny": "Nuasin Next Generation Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "321200861108",
@@ -5075,9 +4814,7 @@
     "lcgms": "Our World Neighborhood Charter School 3",
     "suny": "Our World Neighborhood Charter School 3"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331500860927",
@@ -5125,9 +4862,7 @@
     "lcgms": "Peninsula Preparatory Academy Charter School",
     "opendata": "Peninsula Preparatory Academy Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "321200860870",
@@ -5265,9 +5000,7 @@
     "lcgms": "Rochdale Early Advantage Charter School",
     "opendata": "Rochdale Early Advantage Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310600861101",
@@ -5283,15 +5016,15 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "School in the Square Public Charter School",
-    "opendata": "School in the Square Public Charter School"
+    "opendata": "School in the Square Public Charter School",
+    "nysed": "School In The Square Public Cs"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "800000047050",
@@ -5366,7 +5099,7 @@
    "names": {
     "lcgms": "South Bronx Classical Charter School V",
     "opendata": "South Bronx Classical Charter School IV",
-    "nysed": "South Bronx Classical Charter School",
+    "nysed": "South Bronx Classical Cs V",
     "suny": "South Bronx Classical Charter School V"
    },
    "issues": [
@@ -5411,15 +5144,15 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "South Bronx Early College Academy Charter School",
-    "opendata": "South Bronx Early College Academy Charter School"
+    "opendata": "South Bronx Early College Academy Charter School",
+    "nysed": "South Bronx Early College Academy Cs"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310500860928",
@@ -5435,37 +5168,15 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
-   },
-   "names": {
-    "lcgms": "St. HOPE Leadership Academy Charter School",
-    "opendata": "St. HOPE Leadership Academy Charter School"
-   },
-   "issues": [
-    "Not listed by NYSED"
-   ]
-  },
-  {
-   "id": "staten-island-community-sch",
-   "name": "Staten Island Community Charter Sch",
-   "beds": null,
-   "dbn": null,
-   "address": null,
-   "borough": "Staten Island",
-   "zip": null,
-   "lat": null,
-   "lon": null,
-   "grades": null,
-   "authorizer": null,
-   "in": {
+    "opendata": true,
     "nysed": true
    },
    "names": {
-    "nysed": "Staten Island Community Charter Sch"
+    "lcgms": "St. HOPE Leadership Academy Charter School",
+    "opendata": "St. HOPE Leadership Academy Charter School",
+    "nysed": "St Hope Leadership Academy Cs"
    },
-   "issues": [
-    "Not listed by DOE"
-   ]
+   "issues": []
   },
   {
    "id": "353100861159",
@@ -5485,9 +5196,7 @@
    "names": {
     "lcgms": "Staten Island Hebrew Public Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "320700861080",
@@ -5504,16 +5213,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Storefront Academy Charter School",
     "opendata": "Storefront Academy Charter School",
+    "nysed": "Storefront Academy Cs",
     "suny": "Storefront Academy Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310400861171",
@@ -5530,16 +5239,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Storefront Academy Harlem Charter School",
     "opendata": "Storefront Academy Harlem Charter School",
+    "nysed": "Storefront Academy Harlem Cs",
     "suny": "Storefront Academy Harlem Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "320700861089",
@@ -5616,9 +5325,7 @@
     "opendata": "Success Academy Charter School - Bed-Stuy 2",
     "suny": "Success Academy Charter School - Bed Stuy 2"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331600861095",
@@ -5642,9 +5349,7 @@
     "opendata": "Success Academy Charter School - Bed Stuy 3",
     "suny": "Success Academy Charter School - Bed Stuy 3"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "332100861075",
@@ -5661,15 +5366,18 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Atmosphere Academy Public Charter School",
     "opendata": "Atmosphere Charter School",
+    "nysed": "Atmosphere Academy Public Cs",
     "suny": "Success Academy Charter School - Bensonhurst"
    },
    "issues": [
-    "Not listed by NYSED"
+    "BEDS code differs: DOE 332100861075; NYSED 321000861075",
+    "borough differs: DOE Brooklyn; NYSED Bronx; SUNY Brooklyn"
    ]
   },
   {
@@ -5687,15 +5395,18 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Bronx Charter School for Better Learning II",
     "opendata": "Bronx Charter School for Better Learning II",
+    "nysed": "Bronx Cs-Better Learning Ii",
     "suny": "Success Academy Charter School - Bergen Beach"
    },
    "issues": [
-    "Not listed by NYSED"
+    "BEDS code differs: DOE 332200861076; NYSED 321100861076",
+    "borough differs: DOE Brooklyn; NYSED Bronx; SUNY Brooklyn"
    ]
   },
   {
@@ -5713,16 +5424,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Bronx 1",
     "opendata": "Success Academy Charter School - Bronx 1",
+    "nysed": "Success Academy Cs-Bronx 1",
     "suny": "Success Academy Charter School - Bronx 1"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "320900860980",
@@ -5739,16 +5450,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Bronx 2",
     "opendata": "Success Academy Charter School - Bronx 2",
+    "nysed": "Success Academy Cs-Bronx 2",
     "suny": "Success Academy Charter School - Bronx 2"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "320800861044",
@@ -5765,15 +5476,17 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Bronx 3",
     "opendata": "Success Academy Charter School - Bronx 3",
+    "nysed": "Success Academy Cs-Bronx 3",
     "suny": "Success Academy Charter School - Bronx 3"
    },
    "issues": [
-    "Not listed by NYSED"
+    "BEDS code differs: DOE 320800861044; NYSED 320900861044"
    ]
   },
   {
@@ -5797,7 +5510,7 @@
    "names": {
     "lcgms": "Amber Charter School Kingsbridge",
     "opendata": "Amber Charter School II",
-    "nysed": "Amber Charter School Kingsbridge",
+    "nysed": "Success Academy Cs - Bronx 4",
     "suny": "Success Academy Charter School - Bronx 4"
    },
    "issues": [
@@ -5826,9 +5539,7 @@
     "opendata": "Success Academy Charter School - Bushwick",
     "suny": "Success Academy Charter School - Bushwick"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331500861023",
@@ -5852,9 +5563,7 @@
     "opendata": "Success Academy Charter School - Cobble Hill",
     "suny": "Success Academy Charter School - Cobble Hill"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331700861041",
@@ -5878,9 +5587,7 @@
     "opendata": "Success Academy Crown Heights (Brooklyn 7)",
     "suny": "Success Academy Charter School - Crown Heights"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "342700861090",
@@ -5904,9 +5611,7 @@
     "opendata": "Success Academy Charter School - Far Rockaway",
     "suny": "Success Academy Charter School - Far Rockaway"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331700861094",
@@ -5930,9 +5635,7 @@
     "opendata": "Success Academy Charter School - Flatbush",
     "suny": "Success Academy Charter School - Flatbush"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310300860897",
@@ -5949,16 +5652,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Harlem 1",
     "opendata": "Success Academy Charter School - Harlem 1",
+    "nysed": "Success Academy Cs-Harlem 1",
     "suny": "Success Academy Charter School - Harlem 1"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310500860921",
@@ -5975,16 +5678,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Harlem 2",
     "opendata": "Success Academy Charter School - Harlem 2",
+    "nysed": "Success Academy Cs-Harlem 2",
     "suny": "Success Academy Charter School - Harlem 2"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310400860922",
@@ -6001,16 +5704,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Harlem 3",
     "opendata": "Success Academy Charter School - Harlem 3",
+    "nysed": "Success Academy Cs - Harlem 3",
     "suny": "Success Academy Charter School - Harlem 3"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310300860923",
@@ -6027,16 +5730,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Harlem 4",
     "opendata": "Success Academy Charter School - Harlem 4",
+    "nysed": "Success Academy Cs-Harlem 4",
     "suny": "Success Academy Charter School - Harlem 4"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310500860979",
@@ -6053,16 +5756,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Harlem 5",
     "opendata": "Success Academy Charter School - Harlem 5",
+    "nysed": "Success Academy Cs-Harlem 5",
     "suny": "Success Academy Charter School - Harlem 5"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310200861043",
@@ -6079,16 +5782,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Hell's Kitchen",
     "opendata": "Success Academy Hell's Kitchen (Manhattan 2)",
+    "nysed": "Success Acad Cs-Hell'S Kitchen",
     "suny": "Success Academy Charter School - Hell's Kitchen"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310200861087",
@@ -6105,16 +5808,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Hudson Yards",
     "opendata": "Success Academy Charter School - Hudson Yards",
+    "nysed": "Success Academy Cs-Hudson Yards",
     "suny": "Success Academy Charter School - Hudson Yards"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "321000861088",
@@ -6131,16 +5834,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Norwood",
     "opendata": "Success Academy Charter School - Harlem 6",
+    "nysed": "Success Academy Cs - Norwood",
     "suny": "Success Academy Charter School - Norwood"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "342400861098",
@@ -6156,14 +5859,16 @@
    "authorizer": "SUNY Trustees",
    "in": {
     "lcgms": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - NYC 12",
+    "nysed": "Success Academy Cs-Nyc 12",
     "suny": "Success Academy Charter School - NYC 12"
    },
    "issues": [
-    "Not listed by NYSED"
+    "BEDS code differs: DOE 342400861098; NYSED 320800861098"
    ]
   },
   {
@@ -6186,9 +5891,7 @@
     "lcgms": "Success Academy Charter School - NYC 14",
     "suny": "Success Academy Charter School - NYC 14"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "success-15",
@@ -6209,7 +5912,7 @@
     "suny": "Success Academy Charter School - NYC 15"
    },
    "issues": [
-    "Not listed by DOE, NYSED"
+    "Not listed by DOE"
    ]
   },
   {
@@ -6231,7 +5934,7 @@
     "suny": "Success Academy Charter School - NYC 18"
    },
    "issues": [
-    "Not listed by DOE, NYSED"
+    "Not listed by DOE"
    ]
   },
   {
@@ -6248,14 +5951,16 @@
    "authorizer": "SUNY Trustees",
    "in": {
     "lcgms": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - NYC 5",
+    "nysed": "Success Academy Cs-Nyc 5",
     "suny": "Success Academy Charter School - NYC 5"
    },
    "issues": [
-    "Not listed by NYSED"
+    "BEDS code differs: DOE 331300861091; NYSED 321100861091"
    ]
   },
   {
@@ -6272,14 +5977,16 @@
    "authorizer": "SUNY Trustees",
    "in": {
     "lcgms": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - NYC 6",
+    "nysed": "Success Academy Cs-Nyc 6",
     "suny": "Success Academy Charter School - NYC 6"
    },
    "issues": [
-    "Not listed by NYSED"
+    "BEDS code differs: DOE 331400861092; NYSED 321100861092"
    ]
   },
   {
@@ -6296,14 +6003,16 @@
    "authorizer": "SUNY Trustees",
    "in": {
     "lcgms": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - NYC 7",
+    "nysed": "Success Academy Cs-Nyc 7",
     "suny": "Success Academy Charter School - NYC 7"
    },
    "issues": [
-    "Not listed by NYSED"
+    "BEDS code differs: DOE 331500861093; NYSED 321000861093"
    ]
   },
   {
@@ -6328,9 +6037,7 @@
     "opendata": "Success Academy Prospect Heights (Brooklyn 6)",
     "suny": "Success Academy Charter School - Prospect Heights"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "success-rosedale",
@@ -6351,7 +6058,7 @@
     "suny": "Success Academy Charter School - Rosedale"
    },
    "issues": [
-    "Not listed by DOE, NYSED"
+    "Not listed by DOE"
    ]
   },
   {
@@ -6376,9 +6083,7 @@
     "opendata": "Success Academy Fort Greene (Brooklyn 5)",
     "suny": "Success Academy Charter School - Sheepshead Bay"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "342700861099",
@@ -6402,9 +6107,7 @@
     "opendata": "Success Academy Charter School - South Jamaica",
     "suny": "Success Academy Charter School - South Jamaica"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "342900861078",
@@ -6428,9 +6131,7 @@
     "opendata": "Success Academy Charter School - Springfield Garde",
     "suny": "Success Academy Charter School - Springfield Gardens"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310200861042",
@@ -6447,16 +6148,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Union Square",
     "opendata": "Success Academy Union Square (Manhattan 1)",
+    "nysed": "Success Academy Cs-Union Square",
     "suny": "Success Academy Charter School - Union Square"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310300861008",
@@ -6473,16 +6174,16 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Upper West",
     "opendata": "Success Academy Charter School - Upper West",
+    "nysed": "Success Academy Cs-Upper West",
     "suny": "Success Academy Charter School - Upper West"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "310600861073",
@@ -6508,10 +6209,7 @@
     "nysed": "Rosalyn Yalow Charter School",
     "suny": "Success Academy Charter School - Washington Heights"
    },
-   "issues": [
-    "BEDS code differs: DOE 310600861073; NYSED 320700861073",
-    "borough differs: DOE Manhattan; NYSED Bronx; SUNY Manhattan"
-   ]
+   "issues": []
   },
   {
    "id": "331400861024",
@@ -6533,9 +6231,7 @@
     "lcgms": "Success Academy Charter School - Williamsburg",
     "opendata": "Success Academy Charter School - Williamsburg"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "success-williamsburg",
@@ -6556,7 +6252,7 @@
     "suny": "Success Academy Charter School - Williamsburg"
    },
    "issues": [
-    "Not listed by DOE, NYSED"
+    "Not listed by DOE"
    ]
   },
   {
@@ -6579,9 +6275,7 @@
     "lcgms": "Success Academy Charter School \u2013 Bronx 5 Upper",
     "suny": "Success Academy Charter School - Bronx 5 Upper"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "342400861205",
@@ -6603,9 +6297,7 @@
     "lcgms": "Success Academy Charter School \u2013 NYC 17",
     "suny": "Success Academy Charter School - NYC 17"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331500860953",
@@ -6630,28 +6322,6 @@
     "nysed": "Summit Academy Charter School"
    },
    "issues": []
-  },
-  {
-   "id": "tech-international",
-   "name": "Tech International Charter School",
-   "beds": null,
-   "dbn": null,
-   "address": null,
-   "borough": "Bronx",
-   "zip": null,
-   "lat": null,
-   "lon": null,
-   "grades": null,
-   "authorizer": null,
-   "in": {
-    "nysed": true
-   },
-   "names": {
-    "nysed": "Tech International Charter School"
-   },
-   "issues": [
-    "Not listed by DOE"
-   ]
   },
   {
    "id": "321100860956",
@@ -6714,15 +6384,13 @@
    "grades": "09, 10, 11, 12",
    "authorizer": null,
    "in": {
-    "opendata": true,
-    "nysed": true
+    "opendata": true
    },
    "names": {
-    "opendata": "The Uft Charter School",
-    "nysed": "Uft Charter School"
+    "opendata": "The Uft Charter School"
    },
    "issues": [
-    "Not listed by DOE"
+    "Only in the 2019-20 list; may have closed or been renamed"
    ]
   },
   {
@@ -6747,9 +6415,7 @@
     "opendata": "Bedford Stuyvesant Collegiate Charter School",
     "suny": "Uncommon Bed-Stuy East Charter School NYC"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331300860901",
@@ -6773,9 +6439,7 @@
     "opendata": "Leadership Prep Bedford Stuyvesant Uncommon Prep C",
     "suny": "Uncommon Bed-Stuy West Charter School NYC"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "332300860941",
@@ -6799,9 +6463,7 @@
     "opendata": "Leadership Preparatory Ocean Hill Charter School",
     "suny": "Uncommon Brownsville North Charter School NYC"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "332300860942",
@@ -6825,9 +6487,7 @@
     "opendata": "Leadership Preparatory Brownsville Charter School",
     "suny": "Uncommon Brownsville South Charter School NYC"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331800860943",
@@ -6851,9 +6511,7 @@
     "opendata": "Leadership Prep Canarsie Charter School (Leadershi",
     "suny": "Uncommon Canarsie Charter School NYC"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "332300860936",
@@ -6877,9 +6535,7 @@
     "opendata": "Ocean Hill Collegiate Charter School",
     "suny": "Uncommon Crown Heights Charter School NYC"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331600860860",
@@ -6903,9 +6559,7 @@
     "opendata": "Excellence Boys Charter School",
     "suny": "Uncommon Excellence Boys Charter School NYC"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331600860938",
@@ -6929,9 +6583,7 @@
     "opendata": "Excellence Girls Charter School",
     "suny": "Uncommon Excellence Girls Charter School NYC"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331800860908",
@@ -6981,9 +6633,7 @@
     "opendata": "Williamsburg Collegiate Charter School",
     "suny": "Uncommon Williamsburg Charter School NYC"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "321000860999",
@@ -7055,9 +6705,7 @@
     "lcgms": "United Charter High School for Advanced Math and Science lll",
     "opendata": "New Visions Charter High School for Advanced Math"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "342700861054",
@@ -7155,9 +6803,7 @@
     "lcgms": "Unity Preparatory Charter School of Brooklyn",
     "opendata": "Unity Prep Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "320700860920",
@@ -7200,15 +6846,17 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Urban Assembly Charter School for Computer Science",
     "opendata": "The Urban Assembly Charter School for Computer Sci",
+    "nysed": "Urban Assembly Cs - Computer Science",
     "suny": "Urban Assembly Charter School for Computer Science"
    },
    "issues": [
-    "Not listed by NYSED"
+    "BEDS code differs: DOE 321200861107; NYSED 320700861107"
    ]
   },
   {
@@ -7306,7 +6954,7 @@
     "suny": "Urban Dove Team Charter School IV"
    },
    "issues": [
-    "Not listed by DOE, NYSED"
+    "Not listed by DOE"
    ]
   },
   {
@@ -7331,9 +6979,7 @@
     "opendata": "Valence College Preparatory Charter School",
     "suny": "Valence College Preparatory Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "343000860932",
@@ -7373,15 +7019,15 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "WHIN Music Community Charter School",
-    "opendata": "WHIN Music Community"
+    "opendata": "WHIN Music Community",
+    "nysed": "Whin Music Community Cs"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "320900861174",
@@ -7397,15 +7043,15 @@
    "authorizer": "SUNY Trustees",
    "in": {
     "lcgms": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Wildflower New York Charter School",
+    "nysed": "Wildflower New York Cs",
     "suny": "Wildflower New York Charter School"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "331400860865",
@@ -7450,7 +7096,7 @@
     "suny": "Zeta Charter School - Queens Flushing"
    },
    "issues": [
-    "Not listed by DOE, NYSED"
+    "Not listed by DOE"
    ]
   },
   {
@@ -7495,9 +7141,7 @@
    "names": {
     "lcgms": "Zeta Charter School \u2013 Queens 2"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "342400861207",
@@ -7519,9 +7163,7 @@
     "lcgms": "Zeta Charter School \u2013 Queens Elmhurst",
     "suny": "Zeta Charter School - Queens Elmhurst"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "342800861209",
@@ -7543,9 +7185,7 @@
     "lcgms": "Zeta Charter School \u2013 Queens Jamaica",
     "suny": "Zeta Charter School - Queens Jamaica"
    },
-   "issues": [
-    "Not listed by NYSED"
-   ]
+   "issues": []
   },
   {
    "id": "321200861182",
