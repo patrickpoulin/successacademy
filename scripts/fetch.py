@@ -152,8 +152,14 @@ def read_table(blob):
         enc = "utf-16" if blob[:2] in (b"\xff\xfe", b"\xfe\xff") else "utf-8"
         text = blob.decode(enc, "replace")
         if "<table" in text.lower():
-            p = Tables(); p.feed(text)
-            rows = max(p.tables, key=len)
+            # Excel-flavoured HTML: don't rely on closing tags
+            i = text.lower().find("<tr")
+            log("  sample: " + re.sub(r"\s+", " ", text[i:i + 600]))
+            rows = []
+            for tr in re.split(r"(?i)<tr\b[^>]*>", text)[1:]:
+                tr = re.split(r"(?i)</tr>|</table>", tr)[0]
+                cells = re.findall(r"(?is)<t[dh]\b[^>]*>(.*?)(?=<t[dh]\b|$)", tr)
+                rows.append([clean(re.sub(r"<[^>]+>", " ", c)) for c in cells])
         else:
             rows = list(csv.reader(io.StringIO(text)))
     log(f"  {len(rows)} raw rows")
