@@ -411,7 +411,15 @@ def applies(src, s):
 
 # ---------------------------------------------------------------- geocode
 
+def in_nyc(lat, lon):
+    return 40.47 <= lat <= 40.93 and -74.27 <= lon <= -73.68
+
+
 def geocode(schools):
+    for s in schools:  # drop coordinates that land outside the five boroughs
+        if s["lat"] is not None and not in_nyc(s["lat"], s["lon"]):
+            log(f"  dropping out-of-NYC coordinates for {s['name']}")
+            s["lat"] = s["lon"] = None
     cache = {}
     if os.path.exists(GEOCACHE):
         cache = json.load(open(GEOCACHE))
@@ -420,6 +428,8 @@ def geocode(schools):
         if s["lat"] is not None or not s["address"]:
             continue
         q = s["address"] + ("" if re.search(r"\bNY\b|New York", s["address"]) else f", {s['borough'] or 'New York'}, NY")
+        if s.get("zip"):
+            q += " " + s["zip"]
         if q not in cache and n < 300:
             n += 1
             try:
@@ -430,7 +440,7 @@ def geocode(schools):
             except Exception as e:
                 log(f"  geocode failed for {q}: {e}")
                 continue
-        if cache.get(q):
+        if cache.get(q) and in_nyc(*cache[q]):
             s["lat"], s["lon"] = cache[q]
     os.makedirs(os.path.dirname(GEOCACHE), exist_ok=True)
     json.dump(cache, open(GEOCACHE, "w"), indent=0, sort_keys=True)
