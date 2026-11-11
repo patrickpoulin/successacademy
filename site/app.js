@@ -87,6 +87,64 @@
     if (m && fly) { map.flyTo(m.getLatLng(), Math.max(map.getZoom(), 15), { duration: 0.6 }); m.openPopup(); }
   }
 
+  let shown = [];
+  // "0K,01,02,03" -> "K-3"; leaves already-tidy text like "K-5" alone
+  const gradeRange = (g) => {
+    const parts = String(g || "").split(/\s*,\s*/).filter(Boolean);
+    if (parts.length < 2) return g || "";
+    const n = (p) => (/^0?K$/i.test(p) ? 0 : /^PK$/i.test(p) ? -1 : parseInt(p, 10));
+    const v = parts.map(n).filter((x) => !isNaN(x)).sort((a, b) => a - b);
+    if (!v.length) return g;
+    const lab = (x) => (x === -1 ? "PK" : x === 0 ? "K" : String(x));
+    return lab(v[0]) + "–" + lab(v[v.length - 1]);
+  };
+  const tidy = (a) => (a && a === a.toUpperCase() ? a.toLowerCase().replace(/\b[a-z]/g, (c) => c.toUpperCase()) : a || "");
+  function exportList() {
+    const filters = [
+      $("q").value.trim() && `search "${$("q").value.trim()}"`,
+      $("boro").value, $("auth").value,
+      { ok: "sources agree", issue: "sources disagree" }[$("agree").value],
+      ...srcKeys.filter((k) => tagState[k]).map((k) => (tagState[k] === "no" ? "not listed by " : "listed by ") + SRC[k].short),
+    ].filter(Boolean);
+    const byBoro = {};
+    for (const s of shown) (byBoro[s.borough || "Borough unknown"] ||= []).push(s);
+    const order = ["Bronx", "Brooklyn", "Manhattan", "Queens", "Staten Island", "Borough unknown"];
+    const listed = (s) => srcKeys.filter((k) => s.in[k]).map((k) => SRC[k].short).join(", ");
+    const sections = order.filter((b) => byBoro[b]).map((b) => `
+      <h2>${esc(b)} <span>${byBoro[b].length}</span></h2>
+      <table><thead><tr><th>School</th><th>Address</th><th>Grades</th><th>IDs</th><th>Listed by</th><th>Notes</th></tr></thead><tbody>
+      ${byBoro[b].map((s) => `<tr>
+        <td><b>${esc(s.name)}</b>${s.authorizer ? `<br><small>${esc(s.authorizer)}</small>` : ""}</td>
+        <td>${esc(tidy(s.address))}</td><td>${esc(gradeRange(s.grades))}</td>
+        <td><small>${esc([s.dbn && "DBN " + s.dbn, s.beds && "BEDS " + s.beds].filter(Boolean).join("\n"))}</small></td>
+        <td><small>${esc(listed(s))}</small></td>
+        <td><small>${s.issues.map(esc).join("<br>")}</small></td></tr>`).join("")}
+      </tbody></table>`).join("");
+    const title = "NYC Charter Schools";
+    const doc = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${title} (${shown.length})</title><style>
+body{font:12px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:#111;margin:24px;max-width:1100px}
+h1{font-size:20px;margin:0}h2{font-size:15px;margin:22px 0 6px;border-bottom:2px solid #111;padding-bottom:3px;break-after:avoid}
+h2 span{font-weight:400;color:#666}.meta{color:#555;margin:4px 0 0}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;vertical-align:top;padding:5px 6px;border-bottom:1px solid #ddd}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.03em;color:#555}tr{break-inside:avoid}small{color:#444;white-space:pre-line}
+.bar{margin:14px 0}.bar button{font:inherit;padding:6px 14px;border:1px solid #111;background:#fff;border-radius:6px;cursor:pointer}
+@media print{body{margin:0}.bar{display:none}thead{display:table-header-group}@page{margin:12mm}}
+</style></head><body>
+<h1>${title}</h1>
+<p class="meta">${shown.length} schools · data refreshed ${esc(new Date(data.generated_at).toLocaleString())} · sources: ${esc(srcKeys.map((k) => SRC[k].label).join("; "))}</p>
+${filters.length ? `<p class="meta">Filtered to: ${esc(filters.join(" · "))}</p>` : ""}
+<div class="bar"><button onclick="print()">Print</button></div>
+${sections}
+<p class="meta">Exported from ${esc(location.href)}</p>
+</body></html>`;
+    const url = URL.createObjectURL(new Blob([doc], { type: "text/html" }));
+    const w = window.open(url, "_blank");
+    if (!w) { const a = document.createElement("a"); a.href = url; a.download = "nyc-charter-schools.html"; a.click(); }
+    setTimeout(() => URL.revokeObjectURL(url), 60000);
+  }
+  $("exportBtn").addEventListener("click", exportList);
+
   function render() {
     const q = $("q").value.trim().toLowerCase();
     const boro = $("boro").value, auth = $("auth").value, agree = $("agree").value;
@@ -95,6 +153,7 @@
       (!agree || (agree === "issue") === s.issues.length > 0) &&
       srcKeys.every((k) => !tagState[k] || (tagState[k] === "yes") === !!s.in[k]) &&
       (!q || [s.name, s.address, s.dbn, s.beds, s.zip, ...Object.values(s.names || {})].join(" ").toLowerCase().includes(q)));
+    shown = rows;
     $("count").textContent = `${rows.length} shown`;
     $("list").innerHTML = rows.map((s) => `<li data-id="${esc(s.id)}" class="${s.id === selected ? "sel" : ""}">
       <div class="name">${esc(s.name)}</div>
