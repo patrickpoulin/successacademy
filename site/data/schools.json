@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-11T21:54:28.087527+00:00",
+ "generated_at": "2026-11-11T22:07:29.613201+00:00",
  "sources": {
   "lcgms": {
    "label": "NYC DOE LCGMS school list (current)",
@@ -9,7 +9,7 @@
    "count": 290,
    "historical": false,
    "scope": null,
-   "fetched_at": "2026-11-11T21:49:06.677023+00:00"
+   "fetched_at": "2026-11-11T22:01:29.188702+00:00"
   },
   "opendata": {
    "label": "NYC Open Data school locations (2019-20 snapshot)",
@@ -19,17 +19,17 @@
    "count": 265,
    "historical": true,
    "scope": null,
-   "fetched_at": "2026-11-11T21:49:12.739338+00:00"
+   "fetched_at": "2026-11-11T22:01:34.628355+00:00"
   },
   "nysed": {
    "label": "NYSED data site (state school list)",
    "short": "NYSED",
    "url": "https://data.nysed.gov/lists.php?type=school",
    "ok": true,
-   "count": 213,
+   "count": 274,
    "historical": false,
    "scope": null,
-   "fetched_at": "2026-11-11T21:49:18.143331+00:00",
+   "fetched_at": "2026-11-11T22:01:37.301701+00:00",
    "partial": true
   },
   "suny": {
@@ -40,7 +40,7 @@
    "count": 195,
    "historical": false,
    "scope": "SUNY Trustees",
-   "fetched_at": "2026-11-11T21:54:23.109066+00:00"
+   "fetched_at": "2026-11-11T22:07:10.741944+00:00"
   }
  },
  "schools": [
@@ -312,8 +312,8 @@
    "address": "118-49 MONTAUK STREET",
    "borough": "Queens",
    "zip": "11412",
-   "lat": null,
-   "lon": null,
+   "lat": 40.688129281696,
+   "lon": -73.763587019392,
    "grades": "0K,01,02,03,04,05,06,07,08",
    "authorizer": "SUNY Trustees",
    "in": {
@@ -371,11 +371,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Achievement First North Brooklyn Preparatory Charter School",
     "opendata": "Achievement First North Brooklyn Prep Charter Scho",
+    "nysed": "Achievement First North Brooklyn Pre",
     "suny": "Achievement First North Brooklyn Preparatory Charter School"
    },
    "issues": []
@@ -514,8 +516,8 @@
    "address": "652 West 187 Street",
    "borough": "Manhattan",
    "zip": "10033",
-   "lat": null,
-   "lon": null,
+   "lat": 40.853580165375,
+   "lon": -73.93238625477,
    "grades": "0K,01,02,03,04,05",
    "authorizer": null,
    "in": {
@@ -571,7 +573,7 @@
    "names": {
     "lcgms": "Bedford Stuyvesant New Beginnings Charter School II",
     "opendata": "Bedford Stuyvesant New Beginnings Charter School",
-    "nysed": "Bedford Stuy New Beginnings Charter",
+    "nysed": "Bedford Stuy-New Beginnings Cs 2",
     "suny": "Bedford Stuyvesant New Beginnings Charter School 2"
    },
    "issues": []
@@ -591,11 +593,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Beginning with Children Charter School II",
     "opendata": "Beginning with Children Charter School II",
+    "nysed": "Beginning With Children Cs Ii",
     "suny": "Beginning with Children Charter School II"
    },
    "issues": []
@@ -1339,11 +1343,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Brooklyn Emerging Leaders Academy Charter School",
     "opendata": "Brooklyn Emerging Leaders Academy",
+    "nysed": "Brooklyn Emerging Leaders Academy Cs",
     "suny": "Brooklyn Emerging Leaders Academy Charter School"
    },
    "issues": []
@@ -1363,11 +1369,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Brooklyn Excelsior Charter School",
     "opendata": "Brooklyn Excelsior Charter School",
+    "nysed": "Brooklyn Excelsior Cs",
     "suny": "Brooklyn Excelsior Charter School"
    },
    "issues": []
@@ -1411,11 +1419,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Brooklyn Prospect Charter School Bed-Stuy Clinton Hill Campus",
     "opendata": "The International Charter School of New York",
+    "nysed": "Brooklyn Prospect Cs Bed-Stuy",
     "suny": "Brooklyn Prospect Charter School Bed-Stuy Clinton Hill Campus"
    },
    "issues": []
@@ -1435,11 +1445,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Rosedale",
     "opendata": "Success Academy Charter School - Rosedale - New Yo",
+    "nysed": "Success Academy Cs - Rosedale",
     "suny": "Brooklyn Prospect Charter School Downtown Campus"
    },
    "issues": []
@@ -1459,11 +1471,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Brooklyn Prospect Charter School Sunset Yards Campus",
     "opendata": "Brooklyn Prospect Charter School 15.2",
+    "nysed": "Brooklyn Prospect Cs Sunset Yards",
     "suny": "Brooklyn Prospect Charter School Sunset Yards Campus"
    },
    "issues": []
@@ -1483,14 +1497,18 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Brooklyn Prospect Charter School Windsor Terrace Campus",
     "opendata": "Brooklyn Prospect Charter School",
+    "nysed": "Brooklyn Prospect Cs Windsor Terrace",
     "suny": "Brooklyn Prospect Charter School Windsor Terrace Campus"
    },
-   "issues": []
+   "issues": [
+    "BEDS code differs: DOE 331800860935; NYSED 331500860935"
+   ]
   },
   {
    "id": "331500861156",
@@ -1631,11 +1649,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Brownsville Collegiate Charter School",
     "opendata": "Brownsville Collegiate Charter School",
+    "nysed": "Brownsville Collegiate Cs",
     "suny": "Brownsville Collegiate Charter School"
    },
    "issues": []
@@ -1809,11 +1829,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Central Queens Academy Charter School II",
     "opendata": "Central Queens Academy Charter School",
+    "nysed": "Central Queens Academy Cs Ii",
     "suny": "Central Queens Academy Charter School II"
    },
    "issues": []
@@ -1951,11 +1973,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Community Partnership Charter School",
     "opendata": "Community Partnership Charter School",
+    "nysed": "Community Partnership Cs",
     "suny": "Community Partnership Charter School"
    },
    "issues": []
@@ -2023,11 +2047,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Coney Island Preparatory Public Charter School",
     "opendata": "Coney Island Preparatory Public Charter School",
+    "nysed": "Coney Island Prep Public Cs",
     "suny": "Coney Island Preparatory Public Charter School"
    },
    "issues": []
@@ -2070,11 +2096,13 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Cultural Arts Academy Charter School At Spring Creek",
-    "opendata": "The Cultural Arts Academy at Spring Creek Charter"
+    "opendata": "The Cultural Arts Academy at Spring Creek Charter",
+    "nysed": "Cultural Arts Academy-Spring Creek"
    },
    "issues": []
   },
@@ -2093,11 +2121,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Cypress Hills Ascend Charter School",
     "opendata": "Cypress Hills Ascend Charter School",
+    "nysed": "Cypress Hills Ascend Cs",
     "suny": "Cypress Hills Ascend Charter School"
    },
    "issues": []
@@ -2343,11 +2373,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "East Brooklyn Ascend Charter School",
     "opendata": "East Brooklyn Ascend Charter School",
+    "nysed": "East Brooklyn Ascend Cs",
     "suny": "East Brooklyn Ascend Charter School"
    },
    "issues": []
@@ -2420,11 +2452,13 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Edmund W. Gordon Brooklyn Laboratory Charter School",
-    "opendata": "Edmund W. Gordon Brooklyn Laboratory Charter Schoo"
+    "opendata": "Edmund W. Gordon Brooklyn Laboratory Charter Schoo",
+    "nysed": "Edmund W Gordon Brooklyn Laboratory"
    },
    "issues": []
   },
@@ -2510,8 +2544,8 @@
    "address": "26 West Park Avenue",
    "borough": null,
    "zip": "11561",
-   "lat": 40.748021879633,
-   "lon": -73.980741662778,
+   "lat": null,
+   "lon": null,
    "grades": null,
    "authorizer": null,
    "in": {
@@ -2751,11 +2785,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Flatbush Ascend Charter School",
     "opendata": "Lefferts Gardens Ascend Charter School",
+    "nysed": "Flatbush Ascend Cs",
     "suny": "Flatbush Ascend Charter School"
    },
    "issues": []
@@ -2775,11 +2811,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Forte Preparatory Academy Charter School",
     "opendata": "Forte Preparatory Academy Charter School",
+    "nysed": "Forte Preparatory Academy Cs",
     "suny": "Forte Preparatory Academy Charter School"
    },
    "issues": []
@@ -2902,7 +2940,7 @@
    "names": {
     "lcgms": "Growing Up Green Charter School II",
     "opendata": "Growing Up Green Charter School II",
-    "nysed": "Growing Up Green Charter School"
+    "nysed": "Growing Up Green Cs Ii"
    },
    "issues": []
   },
@@ -3168,11 +3206,13 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Hebrew Language Academy Charter School",
-    "opendata": "Hebrew Language Academy Charter School"
+    "opendata": "Hebrew Language Academy Charter School",
+    "nysed": "Hebrew Language Academy Cs"
    },
    "issues": []
   },
@@ -3190,11 +3230,13 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Hebrew Language Academy Charter School 2",
-    "opendata": "Hebrew Language Academy Charter School 2"
+    "opendata": "Hebrew Language Academy Charter School 2",
+    "nysed": "Hebrew Language Academy Cs 2"
    },
    "issues": []
   },
@@ -3234,11 +3276,13 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Hellenic Classical Charter School",
-    "opendata": "Hellenic Classical Charter School"
+    "opendata": "Hellenic Classical Charter School",
+    "nysed": "Hellenic Classical Cs Park Slope"
    },
    "issues": []
   },
@@ -3278,11 +3322,13 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Hyde Leadership Charter School - Brooklyn",
-    "opendata": "Hyde Leadership Charter School- Brooklyn"
+    "opendata": "Hyde Leadership Charter School- Brooklyn",
+    "nysed": "Hyde Leadership Cs-Brooklyn"
    },
    "issues": []
   },
@@ -3526,8 +3572,8 @@
    "address": "11 West Prospect Avenue",
    "borough": null,
    "zip": "10550",
-   "lat": null,
-   "lon": null,
+   "lat": 40.912775790385,
+   "lon": -73.837459352627,
    "grades": "06,07,08,09,10,11,12",
    "authorizer": null,
    "in": {
@@ -3740,8 +3786,8 @@
    "address": "535 WEST 121 STREET",
    "borough": "Manhattan",
    "zip": "10027",
-   "lat": null,
-   "lon": null,
+   "lat": 40.810940797548,
+   "lon": -73.960787119714,
    "grades": "06,07,08,09,10,11,12",
    "authorizer": null,
    "in": {
@@ -3966,10 +4012,12 @@
    "authorizer": "SUNY Trustees",
    "in": {
     "lcgms": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Kwenda Collegiate Girls Charter School",
+    "nysed": "Kwenda Collegiate Girls Cs",
     "suny": "Kwenda Collegiate Girls Charter School"
    },
    "issues": []
@@ -4058,11 +4106,13 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Launch Expeditionary Learning Charter School",
-    "opendata": "Launch Expeditionary Learning Charter School"
+    "opendata": "Launch Expeditionary Learning Charter School",
+    "nysed": "Launch Expeditionary Learning Cs"
    },
    "issues": []
   },
@@ -4106,11 +4156,13 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "LEEP Dual Language Academy Charter School",
-    "opendata": "LEEP Dual Language Academy"
+    "opendata": "LEEP Dual Language Academy",
+    "nysed": "Leep Dual Language Academy Cs"
    },
    "issues": []
   },
@@ -4225,11 +4277,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Merrick Academy - Queens Public Charter School",
     "opendata": "Merrick Academy - Queens Public Charter School",
+    "nysed": "Merrick Academy-Queens Public Charte",
     "suny": "Merrick Academy - Queens Public Charter School"
    },
    "issues": []
@@ -4392,11 +4446,13 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "New American Academy Charter School",
-    "opendata": "New American Academy Charter School"
+    "opendata": "New American Academy Charter School",
+    "nysed": "New American Academy Cs"
    },
    "issues": []
   },
@@ -4787,7 +4843,7 @@
    "names": {
     "lcgms": "Our World Neighborhood Charter School",
     "opendata": "Our World Neighborhood Charter School",
-    "nysed": "Our World Neighborhood Charter",
+    "nysed": "Our World Neighborhood Cs 2",
     "suny": "Our World Neighborhood Charter School 2"
    },
    "issues": [
@@ -4802,16 +4858,18 @@
    "address": "108-68 Roosevelt Avenue",
    "borough": "Queens",
    "zip": "11368",
-   "lat": null,
-   "lon": null,
+   "lat": 40.751252295423,
+   "lon": -73.856731359436,
    "grades": "0K,01,02,03,04,05",
    "authorizer": "SUNY Trustees",
    "in": {
     "lcgms": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Our World Neighborhood Charter School 3",
+    "nysed": "Our World Neighborhood Cs 3",
     "suny": "Our World Neighborhood Charter School 3"
    },
    "issues": []
@@ -4856,11 +4914,13 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Peninsula Preparatory Academy Charter School",
-    "opendata": "Peninsula Preparatory Academy Charter School"
+    "opendata": "Peninsula Preparatory Academy Charter School",
+    "nysed": "Peninsula Prep Academy Cs"
    },
    "issues": []
   },
@@ -4920,8 +4980,8 @@
    "address": "45-20 83 Street",
    "borough": "Queens",
    "zip": "11373",
-   "lat": 40.86486548567,
-   "lon": -73.40990065193,
+   "lat": 40.741523805605,
+   "lon": -73.88182908488,
    "grades": "0K,01,02,03,04,05,06,07,08,09,10,11,12",
    "authorizer": null,
    "in": {
@@ -4994,11 +5054,13 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Rochdale Early Advantage Charter School",
-    "opendata": "Rochdale Early Advantage Charter School"
+    "opendata": "Rochdale Early Advantage Charter School",
+    "nysed": "Rochdale Early Advantage Cs"
    },
    "issues": []
   },
@@ -5295,7 +5357,7 @@
    "names": {
     "lcgms": "Urban Dove Team Charter School IV",
     "opendata": "New Visions A.I.M. Charter High School I",
-    "nysed": "Urban Dove Team Charter School Iv",
+    "nysed": "Success Academy Cs-Bed Stuy 1",
     "suny": "Success Academy Charter School - Bed Stuy 1"
    },
    "issues": [
@@ -5318,14 +5380,18 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Bed Stuy 2",
     "opendata": "Success Academy Charter School - Bed-Stuy 2",
+    "nysed": "Success Academy Cs-Bed Stuy 2",
     "suny": "Success Academy Charter School - Bed Stuy 2"
    },
-   "issues": []
+   "issues": [
+    "borough differs: DOE Queens; NYSED Brooklyn; SUNY Queens"
+   ]
   },
   {
    "id": "331600861095",
@@ -5372,7 +5438,7 @@
    "names": {
     "lcgms": "Atmosphere Academy Public Charter School",
     "opendata": "Atmosphere Charter School",
-    "nysed": "Atmosphere Academy Public Cs",
+    "nysed": "Success Academy Cs - Bensonhurst",
     "suny": "Success Academy Charter School - Bensonhurst"
    },
    "issues": [
@@ -5401,7 +5467,7 @@
    "names": {
     "lcgms": "Bronx Charter School for Better Learning II",
     "opendata": "Bronx Charter School for Better Learning II",
-    "nysed": "Bronx Cs-Better Learning Ii",
+    "nysed": "Success Academy Cs - Bergen Beach",
     "suny": "Success Academy Charter School - Bergen Beach"
    },
    "issues": [
@@ -5532,11 +5598,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Bushwick",
     "opendata": "Success Academy Charter School - Bushwick",
+    "nysed": "Success Academy Cs-Bushwick",
     "suny": "Success Academy Charter School - Bushwick"
    },
    "issues": []
@@ -5556,11 +5624,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Cobble Hill",
     "opendata": "Success Academy Charter School - Cobble Hill",
+    "nysed": "Success Academy Cs-Cobble Hill",
     "suny": "Success Academy Charter School - Cobble Hill"
    },
    "issues": []
@@ -5580,11 +5650,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Crown Heights",
     "opendata": "Success Academy Crown Heights (Brooklyn 7)",
+    "nysed": "Success Academy Cs-Crown Heights",
     "suny": "Success Academy Charter School - Crown Heights"
    },
    "issues": []
@@ -5604,11 +5676,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Far Rockaway",
     "opendata": "Success Academy Charter School - Far Rockaway",
+    "nysed": "Success Academy Cs-Far Rockaway",
     "suny": "Success Academy Charter School - Far Rockaway"
    },
    "issues": []
@@ -5628,11 +5702,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Flatbush",
     "opendata": "Success Academy Charter School - Flatbush",
+    "nysed": "Success Academy Cs-Flatbush",
     "suny": "Success Academy Charter School - Flatbush"
    },
    "issues": []
@@ -5879,8 +5955,8 @@
    "address": "158-10 101 Street",
    "borough": "Queens",
    "zip": "11414",
-   "lat": null,
-   "lon": null,
+   "lat": 40.661686757106,
+   "lon": -73.832880969888,
    "grades": "05,06,SE",
    "authorizer": "SUNY Trustees",
    "in": {
@@ -6030,11 +6106,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Prospect Heights",
     "opendata": "Success Academy Prospect Heights (Brooklyn 6)",
+    "nysed": "Success Acad Cs-Prospect Heights",
     "suny": "Success Academy Charter School - Prospect Heights"
    },
    "issues": []
@@ -6076,14 +6154,18 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Sheepshead Bay",
     "opendata": "Success Academy Fort Greene (Brooklyn 5)",
+    "nysed": "Success Academy Cs-Sheepshead",
     "suny": "Success Academy Charter School - Sheepshead Bay"
    },
-   "issues": []
+   "issues": [
+    "BEDS code differs: DOE 331300861039; NYSED 332200861039"
+   ]
   },
   {
    "id": "342700861099",
@@ -6100,11 +6182,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - South Jamaica",
     "opendata": "Success Academy Charter School - South Jamaica",
+    "nysed": "Success Academy Cs-South Jamaica",
     "suny": "Success Academy Charter School - South Jamaica"
    },
    "issues": []
@@ -6124,11 +6208,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Springfield Gardens - New York 6",
     "opendata": "Success Academy Charter School - Springfield Garde",
+    "nysed": "Success Academy Cs - Springfield",
     "suny": "Success Academy Charter School - Springfield Gardens"
    },
    "issues": []
@@ -6225,11 +6311,13 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Success Academy Charter School - Williamsburg",
-    "opendata": "Success Academy Charter School - Williamsburg"
+    "opendata": "Success Academy Charter School - Williamsburg",
+    "nysed": "Success Academy Cs-Williamsburg"
    },
    "issues": []
   },
@@ -6269,10 +6357,12 @@
    "authorizer": "SUNY Trustees",
    "in": {
     "lcgms": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Success Academy Charter School \u2013 Bronx 5 Upper",
+    "nysed": "Success Academy Cs-Bronx 5 Upper",
     "suny": "Success Academy Charter School - Bronx 5 Upper"
    },
    "issues": []
@@ -6285,8 +6375,8 @@
    "address": "58-25 Catalpa Avenue",
    "borough": "Queens",
    "zip": "11385",
-   "lat": null,
-   "lon": null,
+   "lat": 40.701927461196,
+   "lon": -73.902231871024,
    "grades": "0K,01,02,03,04,05,06,07,08,09,10,11,12",
    "authorizer": "SUNY Trustees",
    "in": {
@@ -6432,11 +6522,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Uncommon Bed-Stuy West Charter School NYC",
     "opendata": "Leadership Prep Bedford Stuyvesant Uncommon Prep C",
+    "nysed": "Uncommon Bed-Stuy West Cs Nyc",
     "suny": "Uncommon Bed-Stuy West Charter School NYC"
    },
    "issues": []
@@ -6456,11 +6548,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Uncommon Brownsville North Charter School NYC",
     "opendata": "Leadership Preparatory Ocean Hill Charter School",
+    "nysed": "Uncommon Brownsville North Cs Nyc",
     "suny": "Uncommon Brownsville North Charter School NYC"
    },
    "issues": []
@@ -6480,11 +6574,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Uncommon Brownsville South Charter School NYC",
     "opendata": "Leadership Preparatory Brownsville Charter School",
+    "nysed": "Uncommon Brownsville South Cs Nyc",
     "suny": "Uncommon Brownsville South Charter School NYC"
    },
    "issues": []
@@ -6504,11 +6600,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Uncommon Canarsie Charter School NYC",
     "opendata": "Leadership Prep Canarsie Charter School (Leadershi",
+    "nysed": "Uncommon Canarsie Cs Nyc",
     "suny": "Uncommon Canarsie Charter School NYC"
    },
    "issues": []
@@ -6528,11 +6626,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Uncommon Crown Heights Charter School NYC",
     "opendata": "Ocean Hill Collegiate Charter School",
+    "nysed": "Uncommon Crown Heights Cs Nyc",
     "suny": "Uncommon Crown Heights Charter School NYC"
    },
    "issues": []
@@ -6552,11 +6652,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Uncommon Excellence Boys Charter School NYC",
     "opendata": "Excellence Boys Charter School",
+    "nysed": "Uncommon Excellence Boys Cs Nyc",
     "suny": "Uncommon Excellence Boys Charter School NYC"
    },
    "issues": []
@@ -6576,11 +6678,13 @@
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "Uncommon Excellence Girls Charter School NYC",
     "opendata": "Excellence Girls Charter School",
+    "nysed": "Uncommon Excellence Girls Cs Nyc",
     "suny": "Uncommon Excellence Girls Charter School NYC"
    },
    "issues": []
@@ -6699,11 +6803,13 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "United Charter High School for Advanced Math and Science lll",
-    "opendata": "New Visions Charter High School for Advanced Math"
+    "opendata": "New Visions Charter High School for Advanced Math",
+    "nysed": "United Chtr Hs-Adv Ma/Sci Iii"
    },
    "issues": []
   },
@@ -6797,11 +6903,13 @@
    "authorizer": null,
    "in": {
     "lcgms": true,
-    "opendata": true
+    "opendata": true,
+    "nysed": true
    },
    "names": {
     "lcgms": "Unity Preparatory Charter School of Brooklyn",
-    "opendata": "Unity Prep Charter School"
+    "opendata": "Unity Prep Charter School",
+    "nysed": "Unity Prep Cs Of Brooklyn"
    },
    "issues": []
   },
@@ -7131,8 +7239,8 @@
    "address": "133-50 41 Avenue",
    "borough": "Queens",
    "zip": "11355",
-   "lat": 40.742916820644,
-   "lon": -73.914539762173,
+   "lat": 40.757757681537,
+   "lon": -73.830297924145,
    "grades": "0K,01,02,03,04,05,06,07,08,09,10,11,12",
    "authorizer": null,
    "in": {
@@ -7151,8 +7259,8 @@
    "address": "55-30 JUNCTION BOULEVARD",
    "borough": "Queens",
    "zip": "11373",
-   "lat": null,
-   "lon": null,
+   "lat": 40.737879203648,
+   "lon": -73.86642594793,
    "grades": "0K,01,02,03,04,05,06,07,08,09,10,11,12",
    "authorizer": "SUNY Trustees",
    "in": {
@@ -7173,8 +7281,8 @@
    "address": "159-26 Jamaica Avenue",
    "borough": "Queens",
    "zip": "11432",
-   "lat": null,
-   "lon": null,
+   "lat": 40.703411775103,
+   "lon": -73.799855954724,
    "grades": "0K,01,02,03,04,05,06,07,08,09,10,11,12",
    "authorizer": "SUNY Trustees",
    "in": {
