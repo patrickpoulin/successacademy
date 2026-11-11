@@ -13,7 +13,10 @@
     <h1>NYC Charter Schools</h1>
     <p id="updated">Loading…</p>
   </div>
-  <div id="sources" class="sources" aria-label="Data sources"></div>
+  <div class="head-right">
+    <div id="sources" class="sources" aria-label="Data sources"></div>
+    <button id="howBtn" class="how" type="button">How does this work?</button>
+  </div>
 </header>
 <main>
   <aside id="panel">
@@ -31,11 +34,41 @@
         </select>
         <span id="count" class="count"></span>
       </div>
+      <div class="tagfilter">
+        <span class="tf-label">Sources</span>
+        <div id="tags" class="tags" role="group" aria-label="Filter by source"></div>
+      </div>
+      <p class="tf-hint">Tap a source once for "listed by", again for "not listed by", a third time to clear.</p>
     </div>
     <ul id="list"></ul>
   </aside>
   <div id="map" role="region" aria-label="Map of schools"></div>
 </main>
+<dialog id="how" aria-labelledby="howTitle">
+  <form method="dialog" class="dlg-close"><button aria-label="Close">✕</button></form>
+  <h2 id="howTitle">How does this work?</h2>
+  <p>There's no single official, live list of NYC charter schools. Each agency keeps its own list for its own purposes, so this site pulls several of them and lines them up side by side.</p>
+  <h3>Where the data comes from</h3>
+  <ul>
+    <li><b>DOE</b>: the NYC Department of Education's school list (LCGMS), downloaded from its Office of Organizational Data. It covers every school the city tracks, district and charter, and the DOE updates it throughout the year. This is the most current source.</li>
+    <li><b>NYSED</b>: the New York State Education Department's school list on <a href="https://data.nysed.gov" target="_blank" rel="noopener">data.nysed.gov</a>, which covers every charter in the state no matter who authorized it. Each school's profile gives its official state BEDS code.</li>
+    <li><b>SUNY</b>: the SUNY Charter Schools Institute's school finder. It lists only the schools SUNY authorizes (about two thirds of NYC charters), so a school missing from SUNY isn't a problem unless SUNY is its authorizer.</li>
+    <li><b>OpenData 2019</b>: the DOE's school locations on NYC Open Data. The newest copy the city has published is from the 2019-20 school year, so it's used only as a historical baseline and for map coordinates.</li>
+  </ul>
+  <h3>How often it's collected</h3>
+  <p>A GitHub Action runs every morning at about 6 AM Eastern. It downloads each list, matches the schools across lists, and republishes this page. The "Data refreshed" time in the header shows the last run, and the source badges show how many schools each list returned. A red badge means that source couldn't be reached on the last run, and the rest of the page still works from the other sources.</p>
+  <h3>How schools are matched</h3>
+  <p>Schools are matched on their state BEDS code or city DBN where a list has one, and otherwise on name and borough. Schools without coordinates are placed on the map by geocoding their address with the U.S. Census geocoder.</p>
+  <h3>Why the lists disagree</h3>
+  <ul>
+    <li><b>Timing.</b> New schools, closures, mergers and renamings show up in each agency's list on its own schedule, often weeks or months apart.</li>
+    <li><b>Scope.</b> SUNY lists only its own schools. The DOE lists each campus or building as its own row, while the state may list a school once.</li>
+    <li><b>Moves.</b> The first six digits of a BEDS code encode the school district, so a school that relocates can show a different BEDS code in different lists.</li>
+    <li><b>Names.</b> Agencies abbreviate and rename differently ("Charter Sch" vs. "Charter School", network names added or dropped). Name matching catches most of this, but not all.</li>
+    <li><b>Approved but not open.</b> Authorizers sometimes list schools that are approved for a future year.</li>
+  </ul>
+  <p>Schools marked ⚠ (orange on the map) are ones where the lists disagree. That's a prompt to look closer, not proof something is wrong.</p>
+</dialog>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script src="app.js"></script>
 </body>

@@ -50,3 +50,27 @@ input, select { font: inherit; color: var(--text); background: var(--bg); border
   aside { width: 100%; max-width: none; height: 50vh; border-right: 0; border-top: 1px solid var(--line); }
   #map { height: 50vh; flex: none; }
 }
+
+.head-right { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.how { font: inherit; font-size: 13px; color: var(--accent); background: none; border: 1px solid var(--accent);
+  border-radius: 999px; padding: 4px 12px; cursor: pointer; }
+.how:hover { background: var(--sel); }
+.tagfilter { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.tf-label { color: var(--muted); font-size: 12px; }
+.tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font: inherit; font-size: 12px; padding: 3px 10px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--bg); color: var(--text); }
+.tag.yes { border-color: var(--ok); color: var(--ok); background: color-mix(in srgb, var(--ok) 12%, transparent); }
+.tag.no { border-color: var(--bad); color: var(--bad); background: color-mix(in srgb, var(--bad) 10%, transparent); }
+.tag.no::before { content: "not "; }
+.tf-hint { margin: -2px 0 0; color: var(--muted); font-size: 11px; }
+dialog { max-width: 640px; width: calc(100% - 32px); max-height: 85vh; border: 1px solid var(--line); border-radius: 12px;
+  background: var(--panel); color: var(--text); padding: 20px 24px; line-height: 1.5; }
+dialog::backdrop { background: rgb(0 0 0 / .45); }
+dialog h2 { margin: 0 0 8px; font-size: 20px; }
+dialog h3 { margin: 18px 0 4px; font-size: 15px; }
+dialog ul { padding-left: 20px; margin: 4px 0; }
+dialog li { margin: 4px 0; }
+dialog a { color: var(--accent); }
+.dlg-close { position: sticky; top: 0; float: right; margin: -8px -12px 0 0; }
+.dlg-close button { font-size: 16px; background: none; border: 0; color: var(--muted); cursor: pointer; padding: 4px 8px; }

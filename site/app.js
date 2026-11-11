@@ -17,9 +17,27 @@
   $("sources").innerHTML = srcKeys.map((k) => {
     const s = SRC[k];
     const tip = s.ok ? `${s.count} schools from ${s.label}` : `${s.label} failed: ${s.error || "unknown error"}`;
+    if (s.partial) return `<a class="src" href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(s.label)}: still loading the full list">
+      <span class="dot" style="background:var(--warn)"></span>${esc(s.short)} <b>${s.count}+</b></a>`;
     return `<a class="src ${s.ok ? "" : "down"}" href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(tip)}">
       <span class="dot"></span>${esc(s.short)} <b>${s.ok ? s.count : "down"}</b></a>`;
   }).join("");
+
+  // source tag filter: each tag cycles any -> listed -> not listed
+  const tagState = Object.fromEntries(srcKeys.map((k) => [k, ""]));
+  $("tags").innerHTML = srcKeys.map((k) =>
+    `<button type="button" class="tag" data-k="${esc(k)}" aria-pressed="false" title="${esc(SRC[k].label)}">${esc(SRC[k].short)}</button>`).join("");
+  $("tags").addEventListener("click", (e) => {
+    const b = e.target.closest(".tag"); if (!b) return;
+    const k = b.dataset.k, next = { "": "yes", yes: "no", no: "" }[tagState[k]];
+    tagState[k] = next;
+    b.className = "tag " + next;
+    b.setAttribute("aria-pressed", next ? "true" : "false");
+    render();
+  });
+  const how = $("how");
+  $("howBtn").addEventListener("click", () => how.showModal());
+  how.addEventListener("click", (e) => { if (e.target === how) how.close(); });
 
   const uniq = (arr) => [...new Set(arr.filter(Boolean))].sort();
   for (const b of uniq(data.schools.map((s) => s.borough))) $("boro").add(new Option(b, b));
@@ -38,6 +56,7 @@
   const badges = (s) => `<div class="badges">${srcKeys.map((k) => {
     if (!SRC[k].ok) return `<span class="b" title="${esc(SRC[k].label)} unavailable">${esc(SRC[k].short)} ?</span>`;
     const yes = s.in[k];
+    if (!yes && SRC[k].partial) return `<span class="b" title="${esc(SRC[k].label)} still loading">${esc(SRC[k].short)} ?</span>`;
     return `<span class="b ${yes ? "yes" : "no"}" title="${yes ? "Listed" : "Not listed"} in ${esc(SRC[k].label)}">${esc(SRC[k].short)}</span>`;
   }).join("")}</div>`;
   const ids = (s) => [s.dbn && "DBN " + s.dbn, s.beds && "BEDS " + s.beds].filter(Boolean).join(" · ");
@@ -73,6 +92,7 @@
     const rows = data.schools.filter((s) =>
       (!boro || s.borough === boro) && (!auth || s.authorizer === auth) &&
       (!agree || (agree === "issue") === s.issues.length > 0) &&
+      srcKeys.every((k) => !tagState[k] || (tagState[k] === "yes") === !!s.in[k]) &&
       (!q || [s.name, s.address, s.dbn, s.beds, s.zip, ...Object.values(s.names || {})].join(" ").toLowerCase().includes(q)));
     $("count").textContent = `${rows.length} shown`;
     $("list").innerHTML = rows.map((s) => `<li data-id="${esc(s.id)}" class="${s.id === selected ? "sel" : ""}">

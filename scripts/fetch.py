@@ -257,6 +257,7 @@ def src_nysed():
             continue
         if time.time() - start > 300:  # spread a big backfill over several daily runs
             log("  profile time budget used; the rest will be fetched next run")
+            SOURCES["nysed"]["partial"] = True
             break
         try:
             t = clean(re.sub(r"<[^>]+>", " | ", get(base + "profile.php", {"instid": iid}, tries=1, timeout=20)))
@@ -439,11 +440,14 @@ def main():
     for key, src in SOURCES.items():
         log(f"== {key}")
         m = {"label": src["label"], "short": src["short"], "url": "", "ok": False, "count": 0,
+             "historical": bool(src.get("historical")), "scope": src.get("scope"),
              "fetched_at": datetime.now(timezone.utc).isoformat()}
         try:
             recs, url = src["fn"]()
             results[key] = recs
             m.update(ok=True, count=len(recs), url=url)
+            if src.get("partial"):
+                m["partial"] = True
             log(f"  {len(recs)} schools")
         except Exception as e:
             traceback.print_exc()
@@ -451,7 +455,8 @@ def main():
         meta[key] = m
     if not results:
         sys.exit("every source failed; leaving existing data in place")
-    schools = finalize(merge(results), list(results))
+    # a partially loaded list can't tell us a school is missing from it
+    schools = finalize(merge(results), [k for k in results if not SOURCES[k].get("partial")])
     geocode(schools)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w") as f:
