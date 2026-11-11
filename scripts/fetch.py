@@ -242,11 +242,13 @@ def src_nysed():
     by name, then each profile page gives the BEDS code and county. Profiles
     are cached by institution id so a daily run only fetches new schools."""
     base = "https://data.nysed.gov/"
-    pat = r'href="/?profile\.php\?instid=(\d+)"[^>]*>\s*([^<]*CHARTER[^<]*)</a>'
+    pat = r'href="/?profile\.php\?instid=(\d+)"[^>]*>\s*([^<]+?)\s*</a>'
     found = {}
     for county in (31, 32, 33, 34, 35):  # NYC's five county pages
         page = get(base + "profile.php", {"county": county}, timeout=60)
-        hits = dict(re.findall(pat, page, re.I))
+        # every link in the page's "CHARTER SCHOOLS IN ... COUNTY" section, whatever the name
+        m = re.search(r"(?is)<h2>\s*CHARTER SCHOOLS IN.*?</h2>(.*?)(?=<h2|$)", page)
+        hits = dict(re.findall(pat, m.group(1))) if m else {}
         log(f"  county {county}: {len(hits)} charter links")
         found.update(hits)
     log(f"  {len(found)} NYC charter schools")
