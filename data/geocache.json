@@ -1,5 +1,12 @@
 {
+",, Bronx, NY": null,
+",, Manhattan, NY": null,
+",, Queens, NY": null,
 "1000 Westchester Avenue Bronx, Bronx, NY": [
+40.82362829597,
+-73.893795724003
+],
+"1000 Westchester Avenue, Bronx, Bronx, NY": [
 40.82362829597,
 -73.893795724003
 ],
@@ -7,7 +14,15 @@
 40.643509155581,
 -73.896384631237
 ],
+"1001 East 100th Street, Brooklyn, Brooklyn, NY": [
+40.643509155581,
+-73.896384631237
+],
 "101 East 150th Street Bronx, Bronx, NY": [
+40.819823835218,
+-73.92792732909
+],
+"101 East 150th Street, Bronx, Bronx, NY": [
 40.819823835218,
 -73.92792732909
 ],
@@ -15,11 +30,24 @@
 40.65910071204,
 -73.923109481262
 ],
+"1060 Clarkson Avenue, Brooklyn, Brooklyn, NY": [
+40.65910071204,
+-73.923109481262
+],
 "1077 Remsen Avenue Brooklyn956 East 82nd Street Brooklyn, Brooklyn, NY": [
 40.643197327416,
 -73.909173546849
 ],
+"1077 Remsen Avenue, Brooklyn, Brooklyn, NY": [
+40.643197327416,
+-73.909173546849
+],
+"1084 Lenox Road, Brooklyn, Brooklyn, NY": [
+40.658645415646,
+-73.919468590612
+],
 "109-55 128th Street Queens147-65 249th Street Queens, Queens, NY": null,
+"109-55 128th Street, Queens, Queens, NY": null,
 "11 Bartlett Street Brooklyn215 Heyward Street Brooklyn250 Jay Street Brooklyn, Brooklyn, NY": [
 40.700466794173,
 -73.947592829897
@@ -28,7 +56,15 @@
 40.681327244023,
 -73.956878118055
 ],
+"1100 Fulton Street, Brooklyn, Brooklyn, NY": [
+40.681327244023,
+-73.956878118055
+],
 "1137 Herkimer Street Brooklyn791 Empire Boulevard Brooklyn, Brooklyn, NY": [
+40.677877092196,
+-73.91627324689
+],
+"1137 Herkimer Street, Brooklyn, Brooklyn, NY": [
 40.677877092196,
 -73.91627324689
 ],
@@ -37,11 +73,23 @@
 -73.950080623966
 ],
 "115-50 221st Street Jamaica118-49 Montauk Street Queens, Queens, NY": null,
+"115-50 221st Street, Jamaica, Queens, NY": [
+40.69828731981,
+-73.73756261089
+],
 "1160 Beach Avenue Bronx222 Alexander Avenue Bronx413 East 144th Street Bronx, Bronx, NY": [
 40.829103314426,
 -73.865644939991
 ],
+"1160 Beach Avenue, Bronx, Bronx, NY": [
+40.829103314426,
+-73.865644939991
+],
 "1162 River Avenue Bronx, Bronx, NY": [
+40.834647732145,
+-73.92184450909
+],
+"1162 River Avenue, Bronx, Bronx, NY": [
 40.834647732145,
 -73.92184450909
 ],
@@ -54,9 +102,25 @@
 40.628111954741,
 -74.002035415893
 ],
+"1222 63rd Street, Brooklyn, Brooklyn, NY": [
+40.628111954741,
+-74.002035415893
+],
 "1224 Park Place Brooklyn, Brooklyn, NY": [
 40.672689197756,
 -73.937669385496
+],
+"1224 Park Place, Brooklyn, Brooklyn, NY": [
+40.672689197756,
+-73.937669385496
+],
+"123 East 98th Street, Brooklyn, Brooklyn, NY": [
+40.664036468884,
+-73.921767600329
+],
+"123 Linden Boulevard, Brooklyn, Brooklyn, NY": [
+40.652479814631,
+-73.953946835189
 ],
 "1232 Southern Boulevard Bronx1919 Prospect Avenue Bronx, Bronx, NY": [
 40.829209185118,
@@ -66,20 +130,45 @@
 40.869236461625,
 -73.901465327553
 ],
+"124 Eames Place, Bronx, Bronx, NY": [
+40.869236461625,
+-73.901465327553
+],
+"1248 Nelson Avenue, Bronx, Bronx, NY": [
+40.838676219894,
+-73.924615363195
+],
 "125 Stuyvesant Avenue Brooklyn, Brooklyn, NY": [
 40.690724814148,
 -73.933524431634
 ],
 "132-55 Ridgedale Street Queens, Queens, NY": null,
+"132-55 Ridgedale Street, Queens, Queens, NY": null,
 "1325 Jerome Avenue Bronx1475 Macombs Road Bronx, Bronx, NY": [
 40.838580983581,
 -73.918961442353
+],
+"1325 Jerome Avenue, Bronx, Bronx, NY": [
+40.838580983581,
+-73.918961442353
+],
+"133-50 41st Avenue, Flushing, Queens, NY": [
+40.757757681537,
+-73.830297924145
 ],
 "1332 Fulton Avenue Bronx, Bronx, NY": [
 40.83299394967,
 -73.902839916948
 ],
+"1332 Fulton Avenue, Bronx, Bronx, NY": [
+40.83299394967,
+-73.902839916948
+],
 "1366 Cromwell Avenue Bronx180 West 165th Street Bronx, Bronx, NY": [
+40.840379383912,
+-73.919959074479
+],
+"1366 Cromwell Avenue, Bronx, Bronx, NY": [
 40.840379383912,
 -73.919959074479
 ],
@@ -95,6 +184,10 @@
 40.795513919889,
 -73.943977341756
 ],
+"141 Macon Street, Brooklyn, Brooklyn, NY": [
+40.681514242584,
+-73.946373643216
+],
 "144 East 128th Street New York": [
 40.806617177768,
 -73.936938555966
@@ -104,6 +197,10 @@
 -73.974379935531
 ],
 "1485 Pacific Street Brooklyn790 East New York Avenue Brooklyn": [
+40.67729246287,
+-73.942105268841
+],
+"1485 Pacific Street, Brooklyn, Brooklyn, NY": [
 40.67729246287,
 -73.942105268841
 ],
@@ -119,7 +216,15 @@
 40.668637010862,
 -73.918200943695
 ],
+"1504 Macombs Road, Bronx, Bronx, NY": [
+40.84318832578,
+-73.917801305716
+],
 "1506 Brook Avenue Bronx1525 Brook Avenue Bronx, Bronx, NY": [
+40.838364677151,
+-73.905091564408
+],
+"1506 Brook Avenue, Bronx, Bronx, NY": [
 40.838364677151,
 -73.905091564408
 ],
@@ -127,11 +232,24 @@
 40.845225575891,
 -73.847122031094
 ],
+"1529 Williamsbridge Road, Bronx, Bronx, NY": [
+40.845225575891,
+-73.847122031094
+],
 "1535 Story Avenue Bronx1695 Seward Avenue Bronx, Bronx, NY": [
 40.821783060397,
 -73.877231233165
 ],
+"157 Wilson Street, Brooklyn, Brooklyn, NY": [
+40.706470366759,
+-73.960873523864
+],
+"158-20 101st St, , Queens, Queens, NY": null,
 "158-20 101st St, Queens, Queens, NY": null,
+"159-26 Jamaica Avenue, Jamaica, Queens, NY": [
+40.703411775103,
+-73.799855954724
+],
 "1640 Bronxdale Avenue Bronx, Bronx, NY": [
 40.844165531632,
 -73.857687304616
@@ -144,6 +262,10 @@
 40.849615766599,
 -73.850742985753
 ],
+"1744 Williamsbridge Road, Bronx, Bronx, NY": [
+40.849615766599,
+-73.850742985753
+],
 "181 Livingston Street Brooklyn80 Willoughby Street Brooklyn, Brooklyn, NY": [
 40.690016426156,
 -73.986560091073
@@ -152,11 +274,23 @@
 40.699820512869,
 -73.926076863607
 ],
+"181 Suydam Street, Brooklyn, Brooklyn, NY": [
+40.699820512869,
+-73.926076863607
+],
 "183 South 3rd Street Brooklyn, Manhattan, NY": [
 40.711764656189,
 -73.960293564186
 ],
+"183 South 3rd Street, Brooklyn, Manhattan, NY": [
+40.711764656189,
+-73.960293564186
+],
 "188 Rochester Avenue Brooklyn, Brooklyn, NY": [
+40.673052965066,
+-73.928009805838
+],
+"188 Rochester Avenue, Brooklyn, Brooklyn, NY": [
 40.673052965066,
 -73.928009805838
 ],
@@ -165,9 +299,21 @@
 40.8453432014,
 -73.893352047876
 ],
+"1910 Arthur Avenue, Bronx, Bronx, NY": [
+40.8453432014,
+-73.893352047876
+],
+"192 East 151st Street, Bronx, Bronx, NY": [
+40.820486349234,
+-73.927108995471
+],
 "1960 Benedict Avenue Bronx, Bronx, NY": [
 40.834130432903,
 -73.8590753848
+],
+"1991 2nd Avenue, New York": [
+40.788764038102,
+-73.943887831979
 ],
 "20 Bruckner Boulevard Bronx, Bronx, NY": [
 40.807197626406,
@@ -177,7 +323,12 @@
 40.810931847606,
 -73.96076587123
 ],
+"200 East 138th Street, Bronx, Bronx, NY": [
+40.812256992009,
+-73.928946728098
+],
 "200 Woodbine Street Brooklyn, Brooklyn, NY": null,
+"200 Woodbine Street, Brooklyn, Brooklyn, NY": null,
 "2005 Madison Avenue New York207 West 133rd Street New York212 West 120th Street New York": [
 40.80757711678,
 -73.939218508488
@@ -195,11 +346,19 @@
 40.803962554405,
 -73.964019356366
 ],
+"213 Osborn Street, Brooklyn, Brooklyn, NY": [
+40.665761091543,
+-73.907796634754
+],
 "215 West 114th Street New York111 East 33rd Street New York34 West 118th Street New York": [
 40.802158113717,
 -73.953893704506
 ],
 "2169 Blackrock Avenue Bronx, Bronx, NY": [
+40.828978710403,
+-73.851347903364
+],
+"2169 Blackrock Avenue, Bronx, Bronx, NY": [
 40.828978710403,
 -73.851347903364
 ],
@@ -211,6 +370,10 @@
 40.791309336851,
 -73.944216574422
 ],
+"220 East 106th Street, New York": [
+40.791309336851,
+-73.944216574422
+],
 "220 Henry Street New York": [
 40.713724252878,
 -73.985181657543
@@ -219,7 +382,15 @@
 40.814867754507,
 -73.944904032455
 ],
+"222 West 134th Street, New York": [
+40.814867754507,
+-73.944904032455
+],
 "225 Patchen Avenue Brooklyn, Brooklyn, NY": [
+40.683722840822,
+-73.926154063158
+],
+"225 Patchen Avenue, Brooklyn, Brooklyn, NY": [
 40.683722840822,
 -73.926154063158
 ],
@@ -231,7 +402,15 @@
 40.861591780053,
 -73.907129460007
 ],
+"2336 Andrews Avenue North, Bronx, Bronx, NY": [
+40.861591780053,
+-73.907129460007
+],
 "240 East 123rd Street New York": [
+40.801942648781,
+-73.935849425738
+],
+"240 East 123rd Street, New York": [
 40.801942648781,
 -73.935849425738
 ],
@@ -239,7 +418,15 @@
 40.707921711375,
 -74.002465066797
 ],
+"244 West 144th Street, New York": [
+40.821456112307,
+-73.940886959617
+],
 "2520 Church Avenue Brooklyn, Brooklyn, NY": [
+40.650532203264,
+-73.954373459786
+],
+"2520 Church Avenue, Brooklyn, Brooklyn, NY": [
 40.650532203264,
 -73.954373459786
 ],
@@ -251,11 +438,23 @@
 40.639202693981,
 -74.136872017798
 ],
+"263 East 203rd Street, Bronx, Bronx, NY": [
+40.873438151775,
+-73.884217415184
+],
 "268 East 207th Street Bronx101 East 150th Street Bronx, Bronx, NY": [
 40.875514896275,
 -73.877467214018
 ],
+"268 East 207th Street, Bronx, Bronx, NY": [
+40.875514896275,
+-73.877467214018
+],
 "2720 Jerome Avenue Bronx, Bronx, NY": [
+40.868806192767,
+-73.896282739751
+],
+"2720 Jerome Avenue, Bronx, Bronx, NY": [
 40.868806192767,
 -73.896282739751
 ],
@@ -271,7 +470,12 @@
 40.594077582565,
 -73.937694446419
 ],
+"3000 Avenue X, Brooklyn, Brooklyn, NY": [
+40.594077582565,
+-73.937694446419
+],
 "3002 Fort Hamilton Parkway Brooklyn, Brooklyn, NY": null,
+"3002 Fort Hamilton Parkway, Brooklyn, Brooklyn, NY": null,
 "301 Vermont Street Brooklyn350 Linwood Street Brooklyn, Brooklyn, NY": [
 40.672244175969,
 -73.893895291637
@@ -284,11 +488,19 @@
 40.880624846625,
 -73.907317222385
 ],
+"3120 Corlear Avenue, Bronx, Bronx, NY": [
+40.880624846625,
+-73.907317222385
+],
 "339 Morris Avenue Bronx, Bronx, NY": [
 40.813495965932,
 -73.925488049968
 ],
 "341 39th Street Brooklyn, Brooklyn, NY": [
+40.653318640243,
+-74.007183085141
+],
+"341 39th Street, Brooklyn, Brooklyn, NY": [
 40.653318640243,
 -74.007183085141
 ],
@@ -316,7 +528,15 @@
 40.735801076875,
 -73.98735755228
 ],
+"40 Irving Place, New York": [
+40.735801076875,
+-73.98735755228
+],
 "401 West 218th Street New York517 West 164th Street New York": [
+40.870465831612,
+-73.912184858709
+],
+"401 West 218th Street, New York": [
 40.870465831612,
 -73.912184858709
 ],
@@ -324,7 +544,15 @@
 40.837487691523,
 -73.939299571156
 ],
+"425 Westchester Avenue, Bronx, Bronx, NY": [
+40.816571079527,
+-73.916457178717
+],
 "439 West 49th Street New York439 West 49th Street New York": [
+40.763379843971,
+-73.990481433127
+],
+"439 West 49th Street, New York": [
 40.763379843971,
 -73.990481433127
 ],
@@ -336,6 +564,10 @@
 40.810330061252,
 -73.908228221394
 ],
+"447 Wales Avenue, Bronx, Bronx, NY": [
+40.810330061252,
+-73.908228221394
+],
 "461 West 131st Street Manhattan240 West 113th Street New York": [
 40.816205091995,
 -73.953563870497
@@ -344,12 +576,21 @@
 40.758956805046,
 -73.996045123128
 ],
+"51 Christopher Avenue, Brooklyn, Brooklyn, NY": [
+40.671719173054,
+-73.906297314007
+],
 "51-35 Reeder Street Queens78-02 Queens Boulevard Elmhurst, Queens, NY": [
 40.737979067484,
 -73.878213784482
 ],
 "532 West 215th Street New York": null,
+"532 West 215th Street, New York": null,
 "55-30 Junction Boulevard Elmhurst, Queens, NY": [
+40.737879203648,
+-73.86642594793
+],
+"55-30 Junction Boulevard, Elmhurst, Queens, NY": [
 40.737879203648,
 -73.86642594793
 ],
@@ -358,11 +599,16 @@
 -74.005158460159
 ],
 "58-23 Catalpa Ave Queens, Queens, NY": null,
+"58-23 Catalpa Ave, Queens, Queens, NY": null,
 "600 Saint Ann's Avenue Bronx, Bronx, NY": [
 40.816084099966,
 -73.911846783768
 ],
 "604 East 139th Street Bronx, Bronx, NY": [
+40.807020006086,
+-73.916020358094
+],
+"604 East 139th Street, Bronx, Bronx, NY": [
 40.807020006086,
 -73.916020358094
 ],
@@ -378,7 +624,15 @@
 40.819156006667,
 -73.956705806009
 ],
+"625 West 133rd Street, New York": [
+40.819156006667,
+-73.956705806009
+],
 "647 Elton Avenue Bronx, Bronx, NY": [
+40.818383200942,
+-73.914970016589
+],
+"647 Elton Avenue, Bronx, Bronx, NY": [
 40.818383200942,
 -73.914970016589
 ],
@@ -386,7 +640,16 @@
 40.656142785294,
 -73.95297886977
 ],
+"655 Parkside Avenue, Brooklyn, Brooklyn, NY": [
+40.656142785294,
+-73.95297886977
+],
 "68-02 Metropolitan Avenue Middle Village, Queens, NY": null,
+"68-02 Metropolitan Avenue, Middle Village, Queens, NY": null,
+"681 Kelly Street, Bronx, Bronx, NY": [
+40.815490357777,
+-73.902111728336
+],
 "685 East 182nd Street Bronx, Bronx, NY": [
 40.851046858018,
 -73.887947549052
@@ -399,19 +662,39 @@
 40.857362838831,
 -73.935504632592
 ],
+"701 Fort Washington Avenue, New York": [
+40.857362838831,
+-73.935504632592
+],
 "71-111 Convent Avenue New York": [
 40.817377358068,
 -73.952071825481
+],
+"72 Veronica Place, Brooklyn, Brooklyn, NY": [
+40.648709691897,
+-73.952893366629
 ],
 "730 Bryant Avenue Bronx830 Hunts Point Avenue Bronx, Bronx, NY": [
 40.817356690805,
 -73.888331750167
 ],
+"730 Bryant Avenue, Bronx, Bronx, NY": [
+40.815375310522,
+-73.885677520612
+],
 "732 Henry Street Brooklyn, Brooklyn, NY": [
 40.675810988888,
 -74.003496555014
 ],
+"755 Co-op City Boulevard, Bronx, Bronx, NY": [
+40.879026245278,
+-73.826727281158
+],
 "760 East Gun Hill Road Bronx, Bronx, NY": [
+40.876577805028,
+-73.864101059273
+],
+"760 East Gun Hill Road, Bronx, Bronx, NY": [
 40.876577805028,
 -73.864101059273
 ],
@@ -420,12 +703,28 @@
 40.688183873385,
 -73.933016051008
 ],
+"800 Gates Avenue, Brooklyn, Brooklyn, NY": [
+40.688183873385,
+-73.933016051008
+],
+"801 Park Place, Brooklyn, Brooklyn, NY": [
+40.673533773006,
+-73.95117661064
+],
 "82-06 Northern Boulevard Jackson Heights, Queens, NY": [
+40.755513479152,
+-73.885233810516
+],
+"82-06 Northern Boulevard, Jackson Heights, Queens, NY": [
 40.755513479152,
 -73.885233810516
 ],
 "88-14 Justice Avenue Elmhurst, Queens, NY": null,
 "92-53 Springfield Boulevard Queens, Queens, NY": [
+40.723472783128,
+-73.737847758196
+],
+"92-53 Springfield Boulevard, Queens, Queens, NY": [
 40.723472783128,
 -73.737847758196
 ],
@@ -438,6 +737,10 @@
 -73.984488577472
 ],
 "99 Terrace View Avenue Bronx, Bronx, NY": [
+40.876766638435,
+-73.912727510286
+],
+"99 Terrace View Avenue, Bronx, Bronx, NY": [
 40.876766638435,
 -73.912727510286
 ]
