@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NYC Charter Schools</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="title">
+    <h1>NYC Charter Schools</h1>
+    <p id="updated">Loading…</p>
+  </div>
+  <div id="sources" class="sources" aria-label="Data sources"></div>
+</header>
+<main>
+  <aside id="panel">
+    <div class="controls">
+      <input id="q" type="search" placeholder="Search name, address, DBN, BEDS…" aria-label="Search schools">
+      <div class="row">
+        <select id="boro" aria-label="Borough"><option value="">All boroughs</option></select>
+        <select id="auth" aria-label="Authorizer"><option value="">All authorizers</option></select>
+      </div>
+      <div class="row">
+        <select id="agree" aria-label="Source agreement">
+          <option value="">All schools</option>
+          <option value="ok">Sources agree</option>
+          <option value="issue">Sources disagree</option>
+        </select>
+        <span id="count" class="count"></span>
+      </div>
+    </div>
+    <ul id="list"></ul>
+  </aside>
+  <div id="map" role="region" aria-label="Map of schools"></div>
+</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="app.js"></script>
+</body>
+</html>
