@@ -1,13 +1,20 @@
 #!/usr/bin/env bash
-# Probe NYSED sources for a machine-readable charter school list.
+# Probe data.nysed.gov school list and profile layout.
 set -u
 UA="nyc-charter-schools/1.0 (+https://github.com/patrickpoulin/successacademy)"
-hr(){ echo; echo "=================== $* ==================="; }
-hr "data.nysed.gov downloads"
-curl -sL -A "$UA" https://data.nysed.gov/downloads.php > d.html; grep -oiE 'href="[^"]+"[^>]*>[^<]{0,120}' d.html | grep -iE 'zip|xls|csv|mdb|director|charter|enroll|bed' | head -60
-hr "data.nysed.gov charter search"
-curl -sL -A "$UA" "https://data.nysed.gov/lists.php?type=school" | grep -oiE 'href="[^"]+"[^>]*>[^<]{0,100}' | grep -iE 'charter' | head -20
-hr "portal.nysed.gov SEDREF query"
-curl -sSL -A "$UA" -o p.html -m 30 -w "%{http_code} %{url_effective} %{size_download}\n" 'https://portal.nysed.gov/pls/sedrefpublic/SED.sed_inst_qry_vw$.startup'; grep -oiE '<(form|input|select|option)[^>]{0,200}' p.html | head -40
-hr "oms sedref"
-curl -sSL -A "$UA" -o o.html -m 30 -w "%{http_code} %{url_effective} %{size_download}\n" 'http://www.oms.nysed.gov/sedref/home.html'; grep -oiE 'href="[^"]+"' o.html | head -30
+curl -sL -A "$UA" "https://data.nysed.gov/lists.php?type=school" > l.html
+echo "list bytes $(wc -c < l.html); charter links $(grep -oi 'profile.php?instid=[0-9]*\">[^<]*charter' l.html | wc -l)"
+grep -oiE '<(select|option|form)[^>]{0,150}' l.html | head -20
+python3 - <<'PY'
+import re,html
+t=open("l.html",encoding="utf8",errors="replace").read()
+i=t.find("ACADEMIC LEADERSHIP"); print(t[i-600:i+400])
+PY
+echo "=== profile"
+curl -sL -A "$UA" "https://data.nysed.gov/profile.php?instid=800000064236" > p.html
+python3 - <<'PY'
+import re,html
+t=open("p.html",encoding="utf8",errors="replace").read()
+t2=re.sub(r'(?s)<(script|style).*?</\1>','',t); t2=re.sub(r'<[^>]+>',' | ',t2); t2=re.sub(r'(\s*\|\s*)+',' | ',html.unescape(t2))
+i=t2.find("ACADEMIC LEADERSHIP"); print(t2[i:i+1500])
+PY
