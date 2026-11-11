@@ -233,10 +233,54 @@ def src_suny():
     return out, base
 
 
+NYSED_CACHE = os.path.join(ROOT, "data", "nysed_profiles.json")
+NYC_COUNTY_BORO = {"NEW YORK": "Manhattan", "BRONX": "Bronx", "KINGS": "Brooklyn", "QUEENS": "Queens", "RICHMOND": "Staten Island"}
+
+
+def src_nysed():
+    """NYSED data site (data.nysed.gov) school list. Charter schools are picked
+    by name, then each profile page gives the BEDS code and county. Profiles
+    are cached by institution id so a daily run only fetches new schools."""
+    base = "https://data.nysed.gov/"
+    page = get(base + "lists.php", {"type": "school"})
+    found = dict(re.findall(r'href="profile\.php\?instid=(\d+)">([^<]*CHARTER[^<]*)</a>', page, re.I))
+    log(f"  {len(found)} charter schools statewide")
+    cache = json.load(open(NYSED_CACHE)) if os.path.exists(NYSED_CACHE) else {}
+    fetched = 0
+    for iid in found:
+        if iid in cache:
+            continue
+        try:
+            t = clean(re.sub(r"<[^>]+>", " | ", get(base + "profile.php", {"instid": iid}, tries=2)))
+            t = re.sub(r"(\s*\|\s*)+", " | ", t)
+        except Exception:
+            continue
+        county = re.search(r"New York State \| ([A-Z .]+?) COUNTY", t)
+        beds = re.search(r"BEDS CODE: \| (\d{12})", t)
+        cache[iid] = {"county": county.group(1).strip() if county else None, "beds": beds.group(1) if beds else None}
+        fetched += 1
+        time.sleep(0.3)
+    log(f"  fetched {fetched} new profiles")
+    os.makedirs(os.path.dirname(NYSED_CACHE), exist_ok=True)
+    json.dump(cache, open(NYSED_CACHE, "w"), indent=0, sort_keys=True)
+    out = []
+    for iid, name in found.items():
+        c = cache.get(iid, {})
+        if c.get("county") not in NYC_COUNTY_BORO:
+            continue
+        r = rec(name=clean(name).title(), beds=c.get("beds"), borough=NYC_COUNTY_BORO[c["county"]])
+        r["url"] = f"{base}profile.php?instid={iid}"
+        out.append(r)
+    if not out:
+        raise RuntimeError("no NYC charter schools found on data.nysed.gov")
+    return out, base + "lists.php?type=school"
+
+
 SOURCES = {
     "lcgms": {"label": "NYC DOE LCGMS school list (current)", "short": "DOE", "fn": src_doe_lcgms},
     "opendata": {"label": "NYC Open Data school locations (2019-20 snapshot)", "short": "OpenData 2019",
                  "fn": src_doe_opendata, "historical": True},
+    "nysed": {"label": "NYSED data site (state school list)", "short": "NYSED", "fn": src_nysed},
     "suny": {"label": "SUNY Charter Schools Institute", "short": "SUNY", "fn": src_suny,
              "scope": "SUNY Trustees"},
 }
@@ -268,6 +312,8 @@ def merge(results):
                 return s
             if r["dbn"] and r["dbn"] in s["_dbn"]:
                 return s
+            if r["beds"] and len(r["beds"]) == 12 and r["beds"][6:] in s["_bedsid"]:
+                return s
         k = name_key(r["name"])
         best, score = None, 0.0
         for s in schools:
@@ -284,14 +330,17 @@ def merge(results):
         for r in recs:
             s = find(r)
             if not s:
-                s = {"_beds": set(), "_dbn": set(), "_keys": set(), "in": {}, "names": {}, "recs": {}}
+                s = {"_beds": set(), "_bedsid": set(), "_dbn": set(), "_keys": set(), "in": {}, "names": {}, "recs": {}}
                 schools.append(s)
             if src in s["recs"]:  # second campus of the same school in the same source
                 s.setdefault("_extra", []).append((src, r))
             s["in"][src] = True
             s["names"][src] = r["name"]
             s["recs"].setdefault(src, r)
-            if r["beds"]: s["_beds"].add(r["beds"])
+            if r["beds"]:
+                s["_beds"].add(r["beds"])
+                if len(r["beds"]) == 12:
+                    s["_bedsid"].add(r["beds"][6:])
             if r["dbn"]: s["_dbn"].add(r["dbn"])
             s["_keys"].add(name_key(r["name"]))
             for f in ("name", "beds", "dbn", "address", "borough", "zip", "lat", "lon", "grades", "authorizer"):
@@ -306,10 +355,12 @@ def finalize(schools, ok_sources):
         issues = []
         if all(SOURCES[k].get("historical") for k in s["in"]):
             issues.append("Only in the 2019-20 list; may have closed or been renamed")
-        missing = [SOURCES[k]["short"] for k in ok_sources if k not in s["in"] and applies(k, s)]
-        if missing:
-            issues.append("Not listed by " + ", ".join(missing))
-        recs = s["recs"]
+        else:
+            missing = [SOURCES[k]["short"] for k in ok_sources if k not in s["in"] and applies(k, s)]
+            if missing:
+                issues.append("Not listed by " + ", ".join(missing))
+        # identifiers in the 2019-20 snapshot drift when schools move districts, so only compare current lists
+        recs = {k: r for k, r in s["recs"].items() if not SOURCES[k].get("historical")}
         for f, label in (("beds", "BEDS code"), ("dbn", "DBN"), ("borough", "borough")):
             vals = {k: r[f] for k, r in recs.items() if r[f]}
             if len(set(vals.values())) > 1:
