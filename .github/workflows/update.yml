@@ -22,7 +22,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Fetch and merge sources
-        run: pip install -q openpyxl && python3 scripts/fetch.py
+        run: pip install -q openpyxl xlrd && python3 scripts/fetch.py
       - name: Commit refreshed data
         run: |
           git config user.name "github-actions[bot]"

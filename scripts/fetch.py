@@ -138,7 +138,12 @@ def src_doe_opendata():
 
 def read_table(blob):
     """Rows (as dicts) from an .xlsx, an HTML-table .xls, or CSV."""
-    if blob[:2] == b"PK":
+    log(f"  file starts: {blob[:120]!r}")
+    if blob[:4] == b"\xd0\xcf\x11\xe0":  # legacy BIFF .xls
+        import xlrd
+        sh = xlrd.open_workbook(file_contents=blob).sheet_by_index(0)
+        rows = [sh.row_values(i) for i in range(sh.nrows)]
+    elif blob[:2] == b"PK":
         import openpyxl
         ws = openpyxl.load_workbook(io.BytesIO(blob), read_only=True, data_only=True).active
         it = ws.iter_rows(values_only=True)
@@ -150,6 +155,7 @@ def read_table(blob):
             rows = max(p.tables, key=len)
         else:
             rows = list(csv.reader(io.StringIO(text)))
+    log(f"  {len(rows)} raw rows")
     hi = next(i for i, r in enumerate(rows) if sum(1 for c in r if c) >= 5)  # skip title rows
     header = [clean(h) for h in rows[hi]]
     return [dict(zip(header, [clean(c) for c in r])) for r in rows[hi + 1:] if any(r)]
