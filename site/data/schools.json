@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-11T21:10:27.681572+00:00",
+ "generated_at": "2026-11-11T21:12:12.974099+00:00",
  "sources": {
   "lcgms": {
    "label": "NYC DOE LCGMS school list (current)",
@@ -7,7 +7,7 @@
    "url": "",
    "ok": false,
    "count": 0,
-   "fetched_at": "2026-11-11T21:10:11.344088+00:00",
+   "fetched_at": "2026-11-11T21:11:57.269810+00:00",
    "error": "IndexError: list index out of range"
   },
   "opendata": {
@@ -16,7 +16,7 @@
    "url": "https://data.cityofnewyork.us/d/wg9x-4ke6",
    "ok": true,
    "count": 265,
-   "fetched_at": "2026-11-11T21:10:13.239379+00:00"
+   "fetched_at": "2026-11-11T21:12:00.237109+00:00"
   },
   "suny": {
    "label": "SUNY Charter Schools Institute",
@@ -24,7 +24,7 @@
    "url": "https://www.newyorkcharters.org/charter-schools/",
    "ok": true,
    "count": 195,
-   "fetched_at": "2026-11-11T21:10:14.265797+00:00"
+   "fetched_at": "2026-11-11T21:12:08.382495+00:00"
   }
  },
  "schools": [
