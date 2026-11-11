@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-11T22:09:11.817683+00:00",
+ "generated_at": "2026-11-11T22:10:27.706021+00:00",
  "sources": {
   "lcgms": {
    "label": "NYC DOE LCGMS school list (current)",
@@ -9,7 +9,7 @@
    "count": 290,
    "historical": false,
    "scope": null,
-   "fetched_at": "2026-11-11T22:08:42.675844+00:00"
+   "fetched_at": "2026-11-11T22:09:49.810523+00:00"
   },
   "opendata": {
    "label": "NYC Open Data school locations (2019-20 snapshot)",
@@ -19,7 +19,7 @@
    "count": 265,
    "historical": true,
    "scope": null,
-   "fetched_at": "2026-11-11T22:08:48.514157+00:00"
+   "fetched_at": "2026-11-11T22:10:00.806374+00:00"
   },
   "nysed": {
    "label": "NYSED data site (state school list)",
@@ -29,7 +29,7 @@
    "count": 286,
    "historical": false,
    "scope": null,
-   "fetched_at": "2026-11-11T22:08:49.734197+00:00"
+   "fetched_at": "2026-11-11T22:10:02.507332+00:00"
   },
   "suny": {
    "label": "SUNY Charter Schools Institute",
@@ -39,7 +39,7 @@
    "count": 195,
    "historical": false,
    "scope": "SUNY Trustees",
-   "fetched_at": "2026-11-11T22:09:06.228401+00:00"
+   "fetched_at": "2026-11-11T22:10:20.517453+00:00"
   }
  },
  "schools": [
@@ -406,7 +406,7 @@
     "suny": "Achievement First Voyager Charter School"
    },
    "issues": [
-    "BEDS code differs: DOE 331700861086; NYSED 333200861086"
+    "District part of BEDS code differs (school may have moved): DOE 331700861086; NYSED 333200861086"
    ]
   },
   {
@@ -530,7 +530,7 @@
    "issues": []
   },
   {
-   "id": "atmosphere",
+   "id": "atmosphere-academy",
    "name": "Atmosphere Academy Public Charter School",
    "beds": null,
    "dbn": null,
@@ -570,10 +570,32 @@
     "suny": true
    },
    "names": {
-    "lcgms": "Bedford Stuyvesant New Beginnings Charter School II",
+    "lcgms": "Bedford Stuyvesant New Beginnings Charter School",
     "opendata": "Bedford Stuyvesant New Beginnings Charter School",
-    "nysed": "Bedford Stuy-New Beginnings Cs 2",
+    "nysed": "Bedford Stuy New Beginnings Charter",
     "suny": "Bedford Stuyvesant New Beginnings Charter School 2"
+   },
+   "issues": []
+  },
+  {
+   "id": "331600861197",
+   "name": "Bedford Stuyvesant New Beginnings Charter School II",
+   "beds": "331600861197",
+   "dbn": "84K966",
+   "address": "82 LEWIS AVENUE",
+   "borough": "Brooklyn",
+   "zip": "11206",
+   "lat": 40.694636812849,
+   "lon": -73.937447731591,
+   "grades": "0K,01,02,03",
+   "authorizer": null,
+   "in": {
+    "lcgms": true,
+    "nysed": true
+   },
+   "names": {
+    "lcgms": "Bedford Stuyvesant New Beginnings Charter School II",
+    "nysed": "Bedford Stuy-New Beginnings Cs 2"
    },
    "issues": []
   },
@@ -626,7 +648,7 @@
     "nysed": "Bold Charter School"
    },
    "issues": [
-    "BEDS code differs: DOE 320800861143; NYSED 321200861143"
+    "District part of BEDS code differs (school may have moved): DOE 320800861143; NYSED 321200861143"
    ]
   },
   {
@@ -726,7 +748,7 @@
     "suny": "Brilla Pax Charter School"
    },
    "issues": [
-    "BEDS code differs: DOE 321000861161; NYSED 320900861161"
+    "District part of BEDS code differs (school may have moved): DOE 321000861161; NYSED 320900861161"
    ]
   },
   {
@@ -814,43 +836,23 @@
    "lat": 40.884371,
    "lon": -73.839288,
    "grades": "0K,01,02,03,04,05",
-   "authorizer": null,
+   "authorizer": "SUNY Trustees",
    "in": {
     "lcgms": true,
     "opendata": true,
-    "nysed": true
+    "nysed": true,
+    "suny": true
    },
    "names": {
     "lcgms": "Bronx Charter School for Better Learning",
     "opendata": "Bronx Charter School for Better Learning",
-    "nysed": "Bronx Cs-Better Learning"
+    "nysed": "Bronx Cs-Better Learning",
+    "suny": "Bronx Charter School for Better Learning"
    },
    "issues": []
   },
   {
-   "id": "bronx-better-learning",
-   "name": "Bronx Charter School for Better Learning",
-   "beds": null,
-   "dbn": null,
-   "address": "3740 Baychester Avenue, Bronx",
-   "borough": "Bronx",
-   "zip": null,
-   "lat": 40.885445408603,
-   "lon": -73.840674588752,
-   "grades": "K-5",
-   "authorizer": "SUNY Trustees",
-   "in": {
-    "suny": true
-   },
-   "names": {
-    "suny": "Bronx Charter School for Better Learning"
-   },
-   "issues": [
-    "Not listed by DOE, NYSED"
-   ]
-  },
-  {
-   "id": "bronx-better-learning-1",
+   "id": "bronx-better-learning-ii",
    "name": "Bronx Charter School for Better Learning II",
    "beds": null,
    "dbn": null,
@@ -1076,7 +1078,7 @@
     "suny": "Bronx Charter School for Excellence 8"
    },
    "issues": [
-    "BEDS code differs: DOE 320700861179; NYSED 321000861179"
+    "District part of BEDS code differs (school may have moved): DOE 320700861179; NYSED 321000861179"
    ]
   },
   {
@@ -1228,7 +1230,7 @@
     "suny": "Brooklyn Ascend Charter School"
    },
    "issues": [
-    "BEDS code differs: DOE 331800860916; NYSED 332300860916"
+    "District part of BEDS code differs (school may have moved): DOE 331800860916; NYSED 332300860916"
    ]
   },
   {
@@ -1254,7 +1256,7 @@
     "suny": "Brooklyn Ascend Charter School 6"
    },
    "issues": [
-    "BEDS code differs: DOE 331300861177; NYSED 331800861177"
+    "District part of BEDS code differs (school may have moved): DOE 331300861177; NYSED 331800861177"
    ]
   },
   {
@@ -1508,7 +1510,7 @@
     "suny": "Brooklyn Prospect Charter School Windsor Terrace Campus"
    },
    "issues": [
-    "BEDS code differs: DOE 331800860935; NYSED 331500860935"
+    "District part of BEDS code differs (school may have moved): DOE 331800860935; NYSED 331500860935"
    ]
   },
   {
@@ -1834,8 +1836,32 @@
     "suny": true
    },
    "names": {
-    "lcgms": "Central Queens Academy Charter School II",
+    "lcgms": "Central Queens Academy Charter School",
     "opendata": "Central Queens Academy Charter School",
+    "nysed": "Central Queens Academy Cs",
+    "suny": "Central Queens Academy Charter School"
+   },
+   "issues": []
+  },
+  {
+   "id": "342400861198",
+   "name": "Central Queens Academy Charter School II",
+   "beds": "342400861198",
+   "dbn": "84Q423",
+   "address": "88-14 Justice Avenue",
+   "borough": "Queens",
+   "zip": "11373",
+   "lat": null,
+   "lon": null,
+   "grades": "0K,01,02,03,05,06,07,08",
+   "authorizer": "SUNY Trustees",
+   "in": {
+    "lcgms": true,
+    "nysed": true,
+    "suny": true
+   },
+   "names": {
+    "lcgms": "Central Queens Academy Charter School II",
     "nysed": "Central Queens Academy Cs Ii",
     "suny": "Central Queens Academy Charter School II"
    },
@@ -2416,6 +2442,32 @@
    "issues": []
   },
   {
+   "id": "310400860995",
+   "name": "East Harlem Scholars Academy Charter School",
+   "beds": "310400860995",
+   "dbn": "84M518",
+   "address": "2017 1 Avenue",
+   "borough": "Manhattan",
+   "zip": "10029",
+   "lat": 40.79001,
+   "lon": -73.942482,
+   "grades": "0K,01,02,03,04,05,06,07,08",
+   "authorizer": "SUNY Trustees",
+   "in": {
+    "lcgms": true,
+    "opendata": true,
+    "nysed": true,
+    "suny": true
+   },
+   "names": {
+    "lcgms": "East Harlem Scholars Academy Charter School",
+    "opendata": "East Harlem Scholars Academy Charter School",
+    "nysed": "East Harlem Scholars Academy Cs",
+    "suny": "East Harlem Scholars Academy Charter School"
+   },
+   "issues": []
+  },
+  {
    "id": "310400861046",
    "name": "East Harlem Scholars Academy Charter School II",
    "beds": "310400861046",
@@ -2434,14 +2486,12 @@
     "suny": true
    },
    "names": {
-    "lcgms": "East Harlem Scholars Academy Charter School",
-    "opendata": "East Harlem Scholars Academy Charter School",
+    "lcgms": "East Harlem Scholars Academy Charter School II",
+    "opendata": "East Harlem Scholars Academy Charter School II",
     "nysed": "East Harlem Scholars Academy Cs Ii",
     "suny": "East Harlem Scholars Academy Charter School II"
    },
-   "issues": [
-    "BEDS code differs: DOE 310400861046; NYSED 310400860995"
-   ]
+   "issues": []
   },
   {
    "id": "331300861110",
@@ -2724,6 +2774,30 @@
    "issues": []
   },
   {
+   "id": "320900860839",
+   "name": "Family Life Academy Charter School",
+   "beds": "320900860839",
+   "dbn": "84X705",
+   "address": "14 WEST 170 STREET",
+   "borough": "Bronx",
+   "zip": "10452",
+   "lat": 40.840262,
+   "lon": -73.918665,
+   "grades": "0K,01,02,03,04,05",
+   "authorizer": null,
+   "in": {
+    "lcgms": true,
+    "opendata": true,
+    "nysed": true
+   },
+   "names": {
+    "lcgms": "Family Life Academy Charter School",
+    "opendata": "Family Life Academy Charter School",
+    "nysed": "Family Life Academy Charter"
+   },
+   "issues": []
+  },
+  {
    "id": "320700861028",
    "name": "Family Life Academy Charter School II",
    "beds": "320700861028",
@@ -2742,14 +2816,12 @@
     "suny": true
    },
    "names": {
-    "lcgms": "Family Life Academy Charter School",
-    "opendata": "Family Life Academy Charter School",
+    "lcgms": "Family Life Academy Charter School II",
+    "opendata": "Family Life Academy Charter School II",
     "nysed": "Family Life Academy Cs Ii",
-    "suny": "Family Life Academy Charter Schools High School"
+    "suny": "Family Life Academy Charter School II"
    },
-   "issues": [
-    "BEDS code differs: DOE 320700861028; NYSED 320900860839"
-   ]
+   "issues": []
   },
   {
    "id": "320700861070",
@@ -2774,6 +2846,30 @@
     "opendata": "Family Life Academy Charter School III",
     "nysed": "Family Life Academy Cs Iii",
     "suny": "Family Life Academy Charter School III"
+   },
+   "issues": []
+  },
+  {
+   "id": "320900861178",
+   "name": "Family Life Academy Charter Schools High School",
+   "beds": "320900861178",
+   "dbn": "84X640",
+   "address": "1401 Inwood Avenue",
+   "borough": "Bronx",
+   "zip": "10452",
+   "lat": 40.840727287259,
+   "lon": -73.919033174769,
+   "grades": "09,10,11,12",
+   "authorizer": "SUNY Trustees",
+   "in": {
+    "lcgms": true,
+    "nysed": true,
+    "suny": true
+   },
+   "names": {
+    "lcgms": "Family Life Academy Charter Schools High School",
+    "nysed": "Family Life Academy Cs Hs",
+    "suny": "Family Life Academy Charter Schools High School"
    },
    "issues": []
   },
@@ -2945,6 +3041,30 @@
     "nysed": true
    },
    "names": {
+    "lcgms": "Growing Up Green Charter School",
+    "opendata": "Growing Up Green Charter School",
+    "nysed": "Growing Up Green Charter School"
+   },
+   "issues": []
+  },
+  {
+   "id": "342800860824",
+   "name": "Growing Up Green Charter School II",
+   "beds": "342800860824",
+   "dbn": "84Q372",
+   "address": "84-35 152 STREET",
+   "borough": "Queens",
+   "zip": "11432",
+   "lat": 40.713084,
+   "lon": -73.807561,
+   "grades": "0K,01,02,03,04,05",
+   "authorizer": null,
+   "in": {
+    "lcgms": true,
+    "opendata": true,
+    "nysed": true
+   },
+   "names": {
     "lcgms": "Growing Up Green Charter School II",
     "opendata": "Growing Up Green Charter School II",
     "nysed": "Growing Up Green Cs Ii"
@@ -2991,13 +3111,35 @@
     "nysed": true
    },
    "names": {
-    "lcgms": "Harlem Children's Zone Promise Academy II Charter School",
-    "opendata": "Harlem Children's Zone Promise Academy II Charter",
+    "lcgms": "Harlem Children's Zone Promise Academy Charter School",
+    "opendata": "Harlem Children's Zone Promise Academy 1 Charter S",
     "nysed": "Harlem Children'S Zone Promise"
    },
-   "issues": [
-    "BEDS code differs: DOE 310500860864; NYSED 310500860886"
-   ]
+   "issues": []
+  },
+  {
+   "id": "310500860886",
+   "name": "Harlem Children's Zone Promise Academy II Charter School",
+   "beds": "310500860886",
+   "dbn": "84M341",
+   "address": "35 East 125 Street",
+   "borough": "Manhattan",
+   "zip": "10035",
+   "lat": 40.807019,
+   "lon": -73.938714,
+   "grades": "0K,01,02,03,04,05,06,07,08,09,10,11,12",
+   "authorizer": null,
+   "in": {
+    "lcgms": true,
+    "opendata": true,
+    "nysed": true
+   },
+   "names": {
+    "lcgms": "Harlem Children's Zone Promise Academy II Charter School",
+    "opendata": "Harlem Children's Zone Promise Academy II Charter",
+    "nysed": "Harlem Children'S Zone Academy Ii"
+   },
+   "issues": []
   },
   {
    "id": "310300861034",
@@ -3196,7 +3338,7 @@
     "suny": "Haven Charter High School"
    },
    "issues": [
-    "BEDS code differs: DOE 320800861200; NYSED 321100861200"
+    "District part of BEDS code differs (school may have moved): DOE 320800861200; NYSED 321100861200"
    ]
   },
   {
@@ -3546,7 +3688,7 @@
     "nysed": "Imagine Me Leadership Charter School"
    },
    "issues": [
-    "BEDS code differs: DOE 331900860973; NYSED 332300860973"
+    "District part of BEDS code differs (school may have moved): DOE 331900860973; NYSED 332300860973"
    ]
   },
   {
@@ -4082,7 +4224,7 @@
    "issues": []
   },
   {
-   "id": "lamad-arverne",
+   "id": "lamad-arverne-academy",
    "name": "Lamad Arverne Academy Charter School",
    "beds": null,
    "dbn": null,
@@ -4211,8 +4353,8 @@
    "address": "100 ATTORNEY STREET",
    "borough": "Manhattan",
    "zip": "10002",
-   "lat": 40.713362,
-   "lon": -73.986051,
+   "lat": 40.718121,
+   "lon": -73.984116,
    "grades": "0K,01,02,03,04,05",
    "authorizer": null,
    "in": {
@@ -4228,7 +4370,29 @@
    "issues": []
   },
   {
-   "id": "math-engineering-science-mesa-south-brooklyn",
+   "id": "310100861031",
+   "name": "Manhattan Charter School II",
+   "beds": "310100861031",
+   "dbn": "84M080",
+   "address": "220 Henry Street",
+   "borough": "Manhattan",
+   "zip": null,
+   "lat": 40.713362,
+   "lon": -73.986051,
+   "grades": "0K, 01, 02, 03, 04, 05",
+   "authorizer": null,
+   "in": {
+    "opendata": true
+   },
+   "names": {
+    "opendata": "Manhattan Charter School II"
+   },
+   "issues": [
+    "Only in the 2019-20 list; may have closed or been renamed"
+   ]
+  },
+  {
+   "id": "math-engineering-science-academy-mesa-high-south-brooklyn",
    "name": "Math, Engineering, and Science Academy (MESA) Charter High School: South Brooklyn",
    "beds": null,
    "dbn": null,
@@ -4267,8 +4431,30 @@
     "nysed": true
    },
    "names": {
-    "lcgms": "Math, Engineering, and Science Academy Charter High School 2",
+    "lcgms": "Math, Engineering, and Science Academy Charter High School",
     "opendata": "Math, Engineering, and Science Academy Charter Hig",
+    "nysed": "Mesa Charter High School"
+   },
+   "issues": []
+  },
+  {
+   "id": "332000861201",
+   "name": "Math, Engineering, and Science Academy Charter High School 2",
+   "beds": "332000861201",
+   "dbn": "84K970",
+   "address": "1222 63 Street",
+   "borough": "Brooklyn",
+   "zip": "11219",
+   "lat": 40.628111954741,
+   "lon": -74.002035415893,
+   "grades": "09,10,11,12",
+   "authorizer": null,
+   "in": {
+    "lcgms": true,
+    "nysed": true
+   },
+   "names": {
+    "lcgms": "Math, Engineering, and Science Academy Charter High School 2",
     "nysed": "Mesa Charter Hs S Brooklyn"
    },
    "issues": []
@@ -4834,6 +5020,32 @@
    "issues": []
   },
   {
+   "id": "343000860836",
+   "name": "Our World Neighborhood Charter School",
+   "beds": "343000860836",
+   "dbn": "84Q706",
+   "address": "36-12 35 AVENUE",
+   "borough": "Queens",
+   "zip": "11106",
+   "lat": 40.755714,
+   "lon": -73.924175,
+   "grades": "0K,01,02,03,04,05,06,07,08,SE",
+   "authorizer": "SUNY Trustees",
+   "in": {
+    "lcgms": true,
+    "opendata": true,
+    "nysed": true,
+    "suny": true
+   },
+   "names": {
+    "lcgms": "Our World Neighborhood Charter School",
+    "opendata": "Our World Neighborhood Charter School",
+    "nysed": "Our World Neighborhood Charter",
+    "suny": "Our World Neighborhood Charter School"
+   },
+   "issues": []
+  },
+  {
    "id": "342700861118",
    "name": "Our World Neighborhood Charter School 2",
    "beds": "342700861118",
@@ -4852,14 +5064,12 @@
     "suny": true
    },
    "names": {
-    "lcgms": "Our World Neighborhood Charter School",
-    "opendata": "Our World Neighborhood Charter School",
+    "lcgms": "Our World Neighborhood Charter School 2",
+    "opendata": "Our World Neighborhood Charter School 2",
     "nysed": "Our World Neighborhood Cs 2",
     "suny": "Our World Neighborhood Charter School 2"
    },
-   "issues": [
-    "BEDS code differs: DOE 342700861118; NYSED 343000860836"
-   ]
+   "issues": []
   },
   {
    "id": "342400861170",
@@ -5162,21 +5372,115 @@
    "lat": 40.822056,
    "lon": -73.894368,
    "grades": "0K,01,02,03,04,05",
-   "authorizer": "SUNY Trustees",
+   "authorizer": null,
    "in": {
     "lcgms": true,
     "opendata": true,
+    "nysed": true
+   },
+   "names": {
+    "lcgms": "South Bronx Classical Charter School",
+    "opendata": "South Bronx Classical Charter School",
+    "nysed": "South Bronx Classical Charter School"
+   },
+   "issues": []
+  },
+  {
+   "id": "320700861035",
+   "name": "South Bronx Classical Charter School II",
+   "beds": "320700861035",
+   "dbn": "84X364",
+   "address": "333 East 135 Street",
+   "borough": "Bronx",
+   "zip": "10454",
+   "lat": 40.808194,
+   "lon": -73.925459,
+   "grades": "0K,01,02,03,04,05",
+   "authorizer": null,
+   "in": {
+    "lcgms": true,
+    "opendata": true,
+    "nysed": true
+   },
+   "names": {
+    "lcgms": "South Bronx Classical Charter School II",
+    "opendata": "South Bronx Classical Charter School II",
+    "nysed": "South Bronx Classical Cs Ii"
+   },
+   "issues": []
+  },
+  {
+   "id": "320900861084",
+   "name": "South Bronx Classical Charter School III",
+   "beds": "320900861084",
+   "dbn": "84X489",
+   "address": "3458 Third Avenue",
+   "borough": "Bronx",
+   "zip": "10456",
+   "lat": 40.829793,
+   "lon": -73.906403,
+   "grades": "0K,01,02,03,04,05",
+   "authorizer": null,
+   "in": {
+    "lcgms": true,
+    "opendata": true,
+    "nysed": true
+   },
+   "names": {
+    "lcgms": "South Bronx Classical Charter School III",
+    "opendata": "South Bronx Classical Charter School III",
+    "nysed": "South Bronx Classical Cs Iii"
+   },
+   "issues": []
+  },
+  {
+   "id": "320700861122",
+   "name": "South Bronx Classical Charter School IV",
+   "beds": "320700861122",
+   "dbn": "84X588",
+   "address": "757 Concourse Village West",
+   "borough": "Bronx",
+   "zip": "10451",
+   "lat": 40.829793,
+   "lon": -73.906403,
+   "grades": "0K,01,02,03,04,05",
+   "authorizer": null,
+   "in": {
+    "lcgms": true,
+    "opendata": true,
+    "nysed": true
+   },
+   "names": {
+    "lcgms": "South Bronx Classical Charter School IV",
+    "opendata": "South Bronx Classical Charter School IV",
+    "nysed": "South Bronx Classical Charter Sch Iv"
+   },
+   "issues": []
+  },
+  {
+   "id": "320800861204",
+   "name": "South Bronx Classical Charter School V",
+   "beds": "320800861204",
+   "dbn": "84X653",
+   "address": "3880 Sedgwick Avenue",
+   "borough": "Bronx",
+   "zip": "10463",
+   "lat": 40.882830828863,
+   "lon": -73.893694548081,
+   "grades": "0K,01,02,03,04,05,06,07,08,09,10,11,12",
+   "authorizer": "SUNY Trustees",
+   "in": {
+    "lcgms": true,
     "nysed": true,
     "suny": true
    },
    "names": {
     "lcgms": "South Bronx Classical Charter School V",
-    "opendata": "South Bronx Classical Charter School IV",
     "nysed": "South Bronx Classical Cs V",
     "suny": "South Bronx Classical Charter School V"
    },
    "issues": [
-    "BEDS code differs: DOE 321200860898; NYSED 320700861122"
+    "District part of BEDS code differs (school may have moved): DOE 320800861204; NYSED 321000861204"
    ]
   },
   {
@@ -5374,7 +5678,7 @@
     "suny": "Success Academy Charter School - Bed Stuy 1"
    },
    "issues": [
-    "BEDS code differs: DOE 331400861007; NYSED 310400861007",
+    "District part of BEDS code differs (school may have moved): DOE 331400861007; NYSED 310400861007",
     "borough differs: DOE Brooklyn; NYSED Manhattan; SUNY Brooklyn"
    ]
   },
@@ -5431,7 +5735,7 @@
     "suny": "Success Academy Charter School - Bed Stuy 3"
    },
    "issues": [
-    "BEDS code differs: DOE 331600861095; NYSED 342400861095",
+    "District part of BEDS code differs (school may have moved): DOE 331600861095; NYSED 342400861095",
     "borough differs: DOE Brooklyn; NYSED Queens; SUNY Brooklyn"
    ]
   },
@@ -5460,7 +5764,7 @@
     "suny": "Success Academy Charter School - Bensonhurst"
    },
    "issues": [
-    "BEDS code differs: DOE 332100861075; NYSED 321000861075",
+    "District part of BEDS code differs (school may have moved): DOE 332100861075; NYSED 321000861075",
     "borough differs: DOE Brooklyn; NYSED Bronx; SUNY Brooklyn"
    ]
   },
@@ -5489,7 +5793,7 @@
     "suny": "Success Academy Charter School - Bergen Beach"
    },
    "issues": [
-    "BEDS code differs: DOE 332200861076; NYSED 321100861076",
+    "District part of BEDS code differs (school may have moved): DOE 332200861076; NYSED 321100861076",
     "borough differs: DOE Brooklyn; NYSED Bronx; SUNY Brooklyn"
    ]
   },
@@ -5570,7 +5874,7 @@
     "suny": "Success Academy Charter School - Bronx 3"
    },
    "issues": [
-    "BEDS code differs: DOE 320800861044; NYSED 320900861044"
+    "District part of BEDS code differs (school may have moved): DOE 320800861044; NYSED 320900861044"
    ]
   },
   {
@@ -5598,7 +5902,7 @@
     "suny": "Success Academy Charter School - Bronx 4"
    },
    "issues": [
-    "BEDS code differs: DOE 320800861074; NYSED 321000861074"
+    "District part of BEDS code differs (school may have moved): DOE 320800861074; NYSED 321000861074"
    ]
   },
   {
@@ -5962,7 +6266,7 @@
     "suny": "Success Academy Charter School - NYC 12"
    },
    "issues": [
-    "BEDS code differs: DOE 342400861098; NYSED 320800861098"
+    "District part of BEDS code differs (school may have moved): DOE 342400861098; NYSED 320800861098"
    ]
   },
   {
@@ -5990,7 +6294,7 @@
    ]
   },
   {
-   "id": "success-15",
+   "id": "success-academy-15",
    "name": "Success Academy Charter School - NYC 15",
    "beds": null,
    "dbn": null,
@@ -6012,7 +6316,7 @@
    ]
   },
   {
-   "id": "success-18",
+   "id": "success-academy-18",
    "name": "Success Academy Charter School - NYC 18",
    "beds": null,
    "dbn": null,
@@ -6056,7 +6360,7 @@
     "suny": "Success Academy Charter School - NYC 5"
    },
    "issues": [
-    "BEDS code differs: DOE 331300861091; NYSED 321100861091"
+    "District part of BEDS code differs (school may have moved): DOE 331300861091; NYSED 321100861091"
    ]
   },
   {
@@ -6082,7 +6386,7 @@
     "suny": "Success Academy Charter School - NYC 6"
    },
    "issues": [
-    "BEDS code differs: DOE 331400861092; NYSED 321100861092"
+    "District part of BEDS code differs (school may have moved): DOE 331400861092; NYSED 321100861092"
    ]
   },
   {
@@ -6108,7 +6412,7 @@
     "suny": "Success Academy Charter School - NYC 7"
    },
    "issues": [
-    "BEDS code differs: DOE 331500861093; NYSED 321000861093"
+    "District part of BEDS code differs (school may have moved): DOE 331500861093; NYSED 321000861093"
    ]
   },
   {
@@ -6138,7 +6442,7 @@
    "issues": []
   },
   {
-   "id": "success-rosedale",
+   "id": "success-academy-rosedale",
    "name": "Success Academy Charter School - Rosedale",
    "beds": null,
    "dbn": null,
@@ -6184,7 +6488,7 @@
     "suny": "Success Academy Charter School - Sheepshead Bay"
    },
    "issues": [
-    "BEDS code differs: DOE 331300861039; NYSED 332200861039"
+    "District part of BEDS code differs (school may have moved): DOE 331300861039; NYSED 332200861039"
    ]
   },
   {
@@ -6342,7 +6646,7 @@
    "issues": []
   },
   {
-   "id": "success-williamsburg",
+   "id": "success-academy-williamsburg",
    "name": "Success Academy Charter School - Williamsburg",
    "beds": null,
    "dbn": null,
@@ -6864,15 +7168,15 @@
    "issues": []
   },
   {
-   "id": "320800861018",
-   "name": "United Charter High School for the Humanities II",
-   "beds": "320800861018",
-   "dbn": "84X208",
-   "address": "900 TINTON AVENUE",
+   "id": "321000860704",
+   "name": "United Charter High School for the Humanities",
+   "beds": "321000860704",
+   "dbn": "84X553",
+   "address": "99 TERRACE VIEW AVENUE",
    "borough": "Bronx",
-   "zip": "10456",
-   "lat": 40.810671,
-   "lon": -73.907528,
+   "zip": "10463",
+   "lat": 40.877379,
+   "lon": -73.912686,
    "grades": "09,10,11,12",
    "authorizer": "SUNY Trustees",
    "in": {
@@ -6884,12 +7188,34 @@
    "names": {
     "lcgms": "United Charter High School for the Humanities",
     "opendata": "New Visions Charter High School for the Humanities",
-    "nysed": "United Charter Hs-Humanities Ii",
+    "nysed": "United Charter Hs-Humanities",
     "suny": "United Charter High School for the Humanities"
    },
-   "issues": [
-    "BEDS code differs: DOE 320800861018; NYSED 321000860704"
-   ]
+   "issues": []
+  },
+  {
+   "id": "320800861018",
+   "name": "United Charter High School for the Humanities II",
+   "beds": "320800861018",
+   "dbn": "84X208",
+   "address": "900 TINTON AVENUE",
+   "borough": "Bronx",
+   "zip": "10456",
+   "lat": 40.810671,
+   "lon": -73.907528,
+   "grades": "09,10,11,12",
+   "authorizer": null,
+   "in": {
+    "lcgms": true,
+    "opendata": true,
+    "nysed": true
+   },
+   "names": {
+    "lcgms": "United Charter High School for the Humanities II",
+    "opendata": "New Visions Charter High School for the Humanities",
+    "nysed": "United Charter Hs-Humanities Ii"
+   },
+   "issues": []
   },
   {
    "id": "342700861052",
@@ -6958,6 +7284,32 @@
     "suny": true
    },
    "names": {
+    "lcgms": "University Prep Charter High School",
+    "opendata": "University Prep Charter High School",
+    "nysed": "University Prep Charter High School",
+    "suny": "University Prep Charter High School"
+   },
+   "issues": []
+  },
+  {
+   "id": "320700861173",
+   "name": "University Prep Charter Middle School",
+   "beds": "320700861173",
+   "dbn": "84X615",
+   "address": "470 JACKSON AVENUE",
+   "borough": "Bronx",
+   "zip": "10455",
+   "lat": 40.811051,
+   "lon": -73.909363,
+   "grades": "05,06,07,08",
+   "authorizer": "SUNY Trustees",
+   "in": {
+    "lcgms": true,
+    "opendata": true,
+    "nysed": true,
+    "suny": true
+   },
+   "names": {
     "lcgms": "University Prep Charter Middle School",
     "opendata": "University Prep Charter Middle School",
     "nysed": "University Prep Charter Ms",
@@ -6990,7 +7342,7 @@
     "suny": "Urban Assembly Charter School for Computer Science"
    },
    "issues": [
-    "BEDS code differs: DOE 321200861107; NYSED 320700861107"
+    "District part of BEDS code differs (school may have moved): DOE 321200861107; NYSED 320700861107"
    ]
   },
   {
@@ -7004,18 +7356,16 @@
    "lat": 40.689574,
    "lon": -73.950714,
    "grades": "09,10,SE",
-   "authorizer": "SUNY Trustees",
+   "authorizer": null,
    "in": {
     "lcgms": true,
     "opendata": true,
-    "nysed": true,
-    "suny": true
+    "nysed": true
    },
    "names": {
-    "lcgms": "Urban Dove Team Charter School V",
+    "lcgms": "Urban Dove Team Charter School",
     "opendata": "Urban Dove Charter School",
-    "nysed": "Urban Dove Team Charter School V",
-    "suny": "Urban Dove Team Charter School V"
+    "nysed": "Urban Dove Team Charter School"
    },
    "issues": []
   },
@@ -7089,6 +7439,32 @@
    },
    "issues": [
     "Not listed by DOE, NYSED"
+   ]
+  },
+  {
+   "id": "331300861210",
+   "name": "Urban Dove Team Charter School V",
+   "beds": "331300861210",
+   "dbn": "84K979",
+   "address": "181 Suydam Street",
+   "borough": "Brooklyn",
+   "zip": "11221",
+   "lat": 40.699820512869,
+   "lon": -73.926076863607,
+   "grades": "10,11,12",
+   "authorizer": "SUNY Trustees",
+   "in": {
+    "lcgms": true,
+    "nysed": true,
+    "suny": true
+   },
+   "names": {
+    "lcgms": "Urban Dove Team Charter School V",
+    "nysed": "Urban Dove Team Charter School V",
+    "suny": "Urban Dove Team Charter School V"
+   },
+   "issues": [
+    "District part of BEDS code differs (school may have moved): DOE 331300861210; NYSED 333200861210"
    ]
   },
   {
@@ -7260,7 +7636,7 @@
     "suny": "Zeta Charter School - Queens Flushing"
    },
    "issues": [
-    "BEDS code differs: DOE 342400861208; NYSED 342500861208"
+    "District part of BEDS code differs (school may have moved): DOE 342400861208; NYSED 342500861208"
    ]
   },
   {

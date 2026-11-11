@@ -141,6 +141,10 @@
 -73.900840119095
 ],
 "120-27 141st Street Queens, Queens, NY": null,
+"1222 63 Street, Brooklyn, NY 11219": [
+40.628111954741,
+-74.002035415893
+],
 "1222 63rd Street Brooklyn, Brooklyn, NY": [
 40.628111954741,
 -74.002035415893
@@ -263,6 +267,10 @@
 40.840573579424,
 -73.91896868651
 ],
+"1401 Inwood Avenue, Bronx, NY 10452": [
+40.840727287259,
+-73.919033174769
+],
 "141 East 111th Street New York410 East 100th Street New York": [
 40.795513919889,
 -73.943977341756
@@ -376,6 +384,10 @@
 -73.926076863607
 ],
 "181 Suydam Street, Brooklyn, Brooklyn, NY": [
+40.699820512869,
+-73.926076863607
+],
+"181 Suydam Street, Brooklyn, NY 11221": [
 40.699820512869,
 -73.926076863607
 ],
@@ -710,6 +722,10 @@
 40.882830828863,
 -73.893694548081
 ],
+"3880 Sedgwick Avenue, Bronx, NY 10463": [
+40.882830828863,
+-73.893694548081
+],
 "40 Irving Place New York215 East 6th St New York": [
 40.735801076875,
 -73.98735755228
@@ -963,6 +979,10 @@
 40.673533773006,
 -73.95117661064
 ],
+"82 LEWIS AVENUE, Brooklyn, NY 11206": [
+40.694636812849,
+-73.937447731591
+],
 "82-06 Northern Boulevard Jackson Heights, Queens, NY": [
 40.755513479152,
 -73.885233810516
@@ -980,6 +1000,7 @@
 -74.083328536179
 ],
 "88-14 Justice Avenue Elmhurst, Queens, NY": null,
+"88-14 Justice Avenue, Queens, NY 11373": null,
 "92-53 Springfield Boulevard Queens, Queens, NY": [
 40.723472783128,
 -73.737847758196
