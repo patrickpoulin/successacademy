@@ -301,8 +301,14 @@ SOURCES = {
 
 # ---------------------------------------------------------------- merge
 
-STOP = {"charter", "school", "schools", "the", "of", "for", "and", "academy", "public", "cs", "ii", "nyc",
-        "new", "york", "a", "at", "inc", "high", "middle", "elementary", "es", "ms", "hs"}
+STOP = {"charter", "school", "schools", "the", "of", "for", "and", "public", "cs", "nyc",
+        "new", "york", "a", "at", "inc", "es", "ms", "hs"}
+
+
+def charter_id(beds):
+    """Last six digits of a charter school's BEDS code (86xxxx). They stay the same
+    when a school moves; the first six digits encode the district."""
+    return beds[6:] if beds and len(beds) == 12 and beds[6:8] == "86" else None
 
 
 def name_key(n):
@@ -325,11 +331,14 @@ def merge(results):
                 return s
             if r["dbn"] and r["dbn"] in s["_dbn"]:
                 return s
-            if r["beds"] and len(r["beds"]) == 12 and r["beds"][6:] in s["_bedsid"]:
+            if charter_id(r["beds"]) and charter_id(r["beds"]) in s["_bedsid"]:
                 return s
         k = name_key(r["name"])
         best, score = None, 0.0
+        rid = charter_id(r["beds"])
         for s in schools:
+            if rid and s["_bedsid"] and rid not in s["_bedsid"]:
+                continue  # both have state charter ids and they differ: different schools
             for sk in s["_keys"]:
                 sc = similar(k, sk)
                 if sc > score:
@@ -352,8 +361,8 @@ def merge(results):
             s["recs"].setdefault(src, r)
             if r["beds"]:
                 s["_beds"].add(r["beds"])
-                if len(r["beds"]) == 12:
-                    s["_bedsid"].add(r["beds"][6:])
+                if charter_id(r["beds"]):
+                    s["_bedsid"].add(charter_id(r["beds"]))
             if r["dbn"]: s["_dbn"].add(r["dbn"])
             s["_keys"].add(name_key(r["name"]))
             for f in ("name", "beds", "dbn", "address", "borough", "zip", "lat", "lon", "grades", "authorizer"):
@@ -374,6 +383,11 @@ def finalize(schools, ok_sources):
                 issues.append("Not listed by " + ", ".join(missing))
         # identifiers in the 2019-20 snapshot drift when schools move districts, so only compare current lists
         recs = {k: r for k, r in s["recs"].items() if not SOURCES[k].get("historical")}
+        bv = {k: r["beds"] for k, r in recs.items() if r["beds"]}
+        if len(set(bv.values())) > 1 and len({v[6:] for v in bv.values()}) == 1:
+            issues.append("District part of BEDS code differs (school may have moved): " +
+                          "; ".join(f"{SOURCES[k]['short']} {v}" for k, v in bv.items()))
+            recs = {k: dict(r, beds=None) for k, r in recs.items()}
         for f, label in (("beds", "BEDS code"), ("dbn", "DBN"), ("borough", "borough")):
             vals = {k: r[f] for k, r in recs.items() if r[f]}
             if len(set(vals.values())) > 1:
