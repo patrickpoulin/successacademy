@@ -118,67 +118,101 @@ class Tables(HTMLParser):
 # ---------------------------------------------------------------- sources
 
 def src_doe_opendata():
-    """NYC DOE school locations on NYC Open Data (Socrata). Finds the newest
-    'school locations' dataset at run time and keeps rows marked charter."""
-    cat = json.loads(get("https://api.us.socrata.com/api/catalog/v1", {
-        "domains": "data.cityofnewyork.us", "q": "school locations", "only": "datasets", "limit": 50}))
-    cands = []
-    for r in cat["results"]:
-        x = r["resource"]
-        cols = [c.lower() for c in x.get("columns_field_name", [])]
-        if "location" in x["name"].lower() and any("managed_by" in c for c in cols):
-            cands.append((x.get("data_updated_at") or "", x["id"], x["name"]))
-    if not cands:
-        raise RuntimeError("no school-locations dataset with a managed_by column found")
-    cands.sort(reverse=True)
-    _, ds, dsname = cands[0]
-    log(f"  using dataset {ds} ({dsname})")
-    rows = json.loads(get(f"https://data.cityofnewyork.us/resource/{ds}.json", {"$limit": 50000}))
+    """NYC DOE school locations on NYC Open Data. The newest one published is
+    2019-20 (wg9x-4ke6), so it's a historical baseline with coordinates."""
+    ds = "wg9x-4ke6"
+    rows = json.loads(get(f"https://data.cityofnewyork.us/resource/{ds}.json",
+                          {"$where": "managed_by_name='Charter'", "$limit": 5000}))
     out = []
-    for row in rows:
-        flat = {k: (v if not isinstance(v, dict) else json.dumps(v)) for k, v in row.items()}
-        if not re.search(r"charter", " ".join(str(flat.get(k, "")) for k in flat if re.search(r"managed|categor|type", k)), re.I):
+    for r in rows:
+        if re.search(r"closed", r.get("status_descriptions", ""), re.I):
             continue
-        lat = pick(flat, r"^latitude$", r"lat")
-        lon = pick(flat, r"^longitude$", r"lon")
-        if (lat is None or lon is None) and isinstance(row.get("location_1"), dict):
-            lat, lon = row["location_1"].get("latitude"), row["location_1"].get("longitude")
-        dbn = pick(flat, r"ats_system_code", r"^dbn$", r"system_code")
-        out.append(rec(
-            name=pick(flat, r"^location_name$", r"school_name", r"name"),
-            dbn=dbn, beds=pick(flat, r"beds"),
-            address=pick(flat, r"primary_address_line_1", r"address"),
-            borough=borough_of(pick(flat, r"borough"), dbn[2] if dbn and len(dbn) > 2 else None),
-            zip=pick(flat, r"zip"), lat=lat, lon=lon,
-            grades=pick(flat, r"grades_final_text", r"grades")))
+        dbn = r.get("system_code")
+        out.append(rec(name=r.get("location_name"), dbn=dbn, beds=r.get("beds"),
+                       address=(r.get("primary_address_line_1") or "").title(),
+                       borough=borough_of(dbn[2] if dbn and len(dbn) > 2 else None),
+                       lat=r.get("latitude"), lon=r.get("longitude"),
+                       grades=(r.get("grades_final_text") or "").replace(",", ", ")))
     return out, f"https://data.cityofnewyork.us/d/{ds}"
 
 
+def read_table(blob):
+    """Rows (as dicts) from an .xlsx, an HTML-table .xls, or CSV."""
+    if blob[:2] == b"PK":
+        import openpyxl
+        ws = openpyxl.load_workbook(io.BytesIO(blob), read_only=True, data_only=True).active
+        it = ws.iter_rows(values_only=True)
+        rows = list(it)
+    else:
+        text = blob.decode("utf-8", "replace")
+        if "<table" in text.lower():
+            p = Tables(); p.feed(text)
+            rows = max(p.tables, key=len)
+        else:
+            rows = list(csv.reader(io.StringIO(text)))
+    hi = next(i for i, r in enumerate(rows) if sum(1 for c in r if c) >= 5)  # skip title rows
+    header = [clean(h) for h in rows[hi]]
+    return [dict(zip(header, [clean(c) for c in r])) for r in rows[hi + 1:] if any(r)]
+
+
+def src_doe_lcgms():
+    """NYC DOE LCGMS school report: the current district + charter school list,
+    behind the Excel download button on the DOE Office of Organizational Data page."""
+    url = "https://www.nycenet.edu/PublicApps/LCGMS.aspx"
+    page = get(url)
+    form = dict(re.findall(r'<input type="hidden" name="([^"]+)" id="[^"]*" value="([^"]*)"', page))
+    btn = re.search(r"__doPostBack\(&#39;([^&]+)&#39;", page).group(1)
+    form.update({"__EVENTTARGET": btn, "__EVENTARGUMENT": ""})
+    req = urllib.request.Request(url, data=urllib.parse.urlencode(form).encode(),
+                                 headers={"User-Agent": UA, "Content-Type": "application/x-www-form-urlencoded"})
+    with urllib.request.urlopen(req, timeout=120) as r:
+        blob = r.read()
+        log(f"  LCGMS download: {r.headers.get('Content-Type')} {len(blob)} bytes")
+    rows = read_table(blob)
+    log("  LCGMS columns: " + " | ".join(rows[0].keys()))
+    out = []
+    for row in rows:
+        managed = pick(row, r"managed by")
+        dbn = pick(row, r"ats system code", r"system code", r"^dbn$")
+        if not (re.search(r"charter", managed or "", re.I) or (dbn or "").startswith("84")):
+            continue
+        if re.search(r"closed", pick(row, r"status") or "", re.I):
+            continue
+        out.append(rec(
+            name=pick(row, r"^location name$", r"school name", r"name"), dbn=dbn, beds=pick(row, r"beds"),
+            address=pick(row, r"primary address", r"address"),
+            borough=borough_of(pick(row, r"city", r"borough"), dbn[2] if dbn and len(dbn) > 2 else None),
+            zip=pick(row, r"zip"), grades=pick(row, r"grades final", r"grades"),
+            lat=pick(row, r"latitude"), lon=pick(row, r"longitude")))
+    if not out:
+        raise RuntimeError("no charter rows found in LCGMS file")
+    return out, "https://infohub.nyced.org/in-our-schools/operations/lcgms"
+
+
 def src_suny():
-    """SUNY Charter Schools Institute school finder (SUNY-authorized only)."""
+    """SUNY Charter Schools Institute school finder (SUNY-authorized only).
+    One row per school; a school with several campuses lists each address."""
     base = "https://www.newyorkcharters.org/charter-schools/"
     out, seen = [], set()
-    for pg in range(1, 60):
-        p = Tables()
-        p.feed(get(base, {"pg": pg} if pg > 1 else None))
-        rows = [r for t in p.tables for r in t]
-        if not rows:
-            break
-        header = [h.lower() for h in rows[0]]
+    cell = lambda cls, row: (re.search(r'<td class="%s"[^>]*>(.*?)</td>' % cls, row, re.S) or [None, ""])[1]
+    for pg in range(1, 80):
+        page = get(base, {"pg": pg} if pg > 1 else None)
+        rows = re.findall(r'<tr class="school-\d+ school-row.*?</tr>', page, re.S)
         new = 0
-        for r in rows[1:]:
-            d = dict(zip(header, r))
-            key = d.get("school")
-            if not key or key in seen:
+        for row in rows:
+            m = re.search(r'<a href="(/charter-schools/[^"]+)">(.*?)</a>', row, re.S)
+            if not m or m.group(1) in seen:
                 continue
-            seen.add(key)
+            seen.add(m.group(1))
             new += 1
-            region = d.get("region", "")
-            boro = borough_of(d.get("borough"))
-            if not (boro or re.search(r"new york city|nyc", region, re.I)):
+            if "new york city" not in clean(re.sub("<[^>]+>", " ", cell("region", row))).lower():
                 continue
-            out.append(rec(name=key, borough=boro, grades=d.get("grades"), address=d.get("location"),
-                           authorizer="SUNY Trustees"))
+            addrs = [clean(re.sub(r"<br\s*/?>", ", ", a)) for a in re.findall(r"<li>(.*?)</li>", cell("locations", row), re.S)]
+            out.append(rec(name=clean(m.group(2)), borough=borough_of(clean(cell("borough", row))),
+                           grades=clean(re.sub("<[^>]+>", " ", cell("grades", row))).split(" for ")[0],
+                           address=addrs[0] if addrs else None, authorizer="SUNY Trustees"))
+            out[-1]["campuses"] = addrs
+            out[-1]["url"] = "https://www.newyorkcharters.org" + m.group(1)
         if not new:
             break
     if not out:
@@ -187,7 +221,9 @@ def src_suny():
 
 
 SOURCES = {
-    "doe": {"label": "NYC DOE school locations (NYC Open Data)", "short": "DOE", "fn": src_doe_opendata},
+    "lcgms": {"label": "NYC DOE LCGMS school list (current)", "short": "DOE", "fn": src_doe_lcgms},
+    "opendata": {"label": "NYC Open Data school locations (2019-20 snapshot)", "short": "OpenData 2019",
+                 "fn": src_doe_opendata, "historical": True},
     "suny": {"label": "SUNY Charter Schools Institute", "short": "SUNY", "fn": src_suny,
              "scope": "SUNY Trustees"},
 }
@@ -255,6 +291,8 @@ def finalize(schools, ok_sources):
     out = []
     for s in schools:
         issues = []
+        if all(SOURCES[k].get("historical") for k in s["in"]):
+            issues.append("Only in the 2019-20 list; may have closed or been renamed")
         missing = [SOURCES[k]["short"] for k in ok_sources if k not in s["in"] and applies(k, s)]
         if missing:
             issues.append("Not listed by " + ", ".join(missing))
@@ -286,6 +324,8 @@ def finalize(schools, ok_sources):
 def applies(src, s):
     """Authorizer lists only cover their own schools, so missing from SUNY
     isn't a disagreement for a school another authorizer oversees."""
+    if SOURCES[src].get("historical"):
+        return False
     scope = SOURCES[src].get("scope")
     if not scope:
         return True
