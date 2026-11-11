@@ -149,7 +149,8 @@ def read_table(blob):
         it = ws.iter_rows(values_only=True)
         rows = list(it)
     else:
-        text = blob.decode("utf-8", "replace")
+        enc = "utf-16" if blob[:2] in (b"\xff\xfe", b"\xfe\xff") else "utf-8"
+        text = blob.decode(enc, "replace")
         if "<table" in text.lower():
             p = Tables(); p.feed(text)
             rows = max(p.tables, key=len)
