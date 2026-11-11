@@ -74,4 +74,6 @@ dialog li { margin: 4px 0; }
 dialog a { color: var(--accent); }
 .dlg-close { position: sticky; top: 0; float: right; margin: -8px -12px 0 0; }
 .dlg-close button { font-size: 16px; background: none; border: 0; color: var(--muted); cursor: pointer; padding: 4px 8px; }
-.tiles-dark { filter: invert(1) hue-rotate(180deg) brightness(.95) contrast(.9); }
+/* muted basemap so the school markers carry the color */
+.tiles-light { filter: grayscale(1) brightness(1.06) contrast(.85); }
+.tiles-dark { filter: grayscale(1) invert(1) brightness(.9) contrast(.85); }

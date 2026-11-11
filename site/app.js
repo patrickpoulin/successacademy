@@ -47,7 +47,7 @@
   const dark = matchMedia("(prefers-color-scheme: dark)").matches;
   // OpenStreetMap's standard tiles: no API key, attribution required
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19, className: dark ? "tiles-dark" : "",
+    maxZoom: 19, className: dark ? "tiles-dark" : "tiles-light",
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map);
 
