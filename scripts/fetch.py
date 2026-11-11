@@ -25,13 +25,13 @@ def log(*a):
     print(*a, file=sys.stderr, flush=True)
 
 
-def get(url, params=None, tries=3, binary=False):
+def get(url, params=None, tries=3, binary=False, timeout=60):
     if params:
         url += ("&" if "?" in url else "?") + urllib.parse.urlencode(params)
     for i in range(tries):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
-            with urllib.request.urlopen(req, timeout=60) as r:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
                 b = r.read()
                 return b if binary else b.decode(r.headers.get_content_charset() or "utf-8", "replace")
         except Exception as e:
@@ -245,18 +245,21 @@ def src_nysed():
     pat = r'href="/?profile\.php\?instid=(\d+)"[^>]*>\s*([^<]*CHARTER[^<]*)</a>'
     found = {}
     for county in (31, 32, 33, 34, 35):  # NYC's five county pages
-        page = get(base + "profile.php", {"county": county})
+        page = get(base + "profile.php", {"county": county}, timeout=60)
         hits = dict(re.findall(pat, page, re.I))
         log(f"  county {county}: {len(hits)} charter links")
         found.update(hits)
     log(f"  {len(found)} NYC charter schools")
     cache = json.load(open(NYSED_CACHE)) if os.path.exists(NYSED_CACHE) else {}
-    fetched = 0
+    fetched, start = 0, time.time()
     for iid in found:
         if iid in cache:
             continue
+        if time.time() - start > 300:  # spread a big backfill over several daily runs
+            log("  profile time budget used; the rest will be fetched next run")
+            break
         try:
-            t = clean(re.sub(r"<[^>]+>", " | ", get(base + "profile.php", {"instid": iid}, tries=2)))
+            t = clean(re.sub(r"<[^>]+>", " | ", get(base + "profile.php", {"instid": iid}, tries=1, timeout=20)))
             t = re.sub(r"(\s*\|\s*)+", " | ", t)
         except Exception:
             continue
@@ -264,6 +267,8 @@ def src_nysed():
         beds = re.search(r"BEDS CODE: \| (\d{12})", t)
         cache[iid] = {"county": county.group(1).strip() if county else None, "beds": beds.group(1) if beds else None}
         fetched += 1
+        if fetched % 25 == 0:
+            log(f"  {fetched} profiles fetched")
         time.sleep(0.3)
     log(f"  fetched {fetched} new profiles")
     os.makedirs(os.path.dirname(NYSED_CACHE), exist_ok=True)
