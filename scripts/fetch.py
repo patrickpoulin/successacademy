@@ -13,7 +13,7 @@ from html.parser import HTMLParser
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "site", "data", "schools.json")
 GEOCACHE = os.path.join(ROOT, "data", "geocache.json")
-UA = "Mozilla/5.0 (compatible; nyc-charter-schools/1.0; +https://github.com/patrickpoulin/successacademy)"
+UA = "nyc-charter-schools/1.0 (+https://github.com/patrickpoulin/successacademy)"
 
 BOROUGHS = {"M": "Manhattan", "X": "Bronx", "K": "Brooklyn", "Q": "Queens", "R": "Staten Island"}
 BORO_NAMES = {"manhattan": "Manhattan", "new york": "Manhattan", "bronx": "Bronx", "brooklyn": "Brooklyn",
