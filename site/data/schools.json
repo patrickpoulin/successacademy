@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-19T19:01:39.292066+00:00",
+ "generated_at": "2026-11-20T18:38:38.825957+00:00",
  "sources": {
   "lcgms": {
    "label": "NYC DOE LCGMS school list (current)",
@@ -9,7 +9,7 @@
    "count": 290,
    "historical": false,
    "scope": null,
-   "fetched_at": "2026-11-19T19:00:42.073580+00:00"
+   "fetched_at": "2026-11-20T18:38:17.856886+00:00"
   },
   "opendata": {
    "label": "NYC Open Data school locations (2019-20 snapshot)",
@@ -19,7 +19,7 @@
    "count": 265,
    "historical": true,
    "scope": null,
-   "fetched_at": "2026-11-19T19:00:47.377137+00:00"
+   "fetched_at": "2026-11-20T18:38:26.345366+00:00"
   },
   "nysed": {
    "label": "NYSED data site (state school list)",
@@ -29,7 +29,7 @@
    "count": 286,
    "historical": false,
    "scope": null,
-   "fetched_at": "2026-11-19T19:00:48.807202+00:00"
+   "fetched_at": "2026-11-20T18:38:27.954838+00:00"
   },
   "suny": {
    "label": "SUNY Charter Schools Institute",
@@ -39,7 +39,7 @@
    "count": 195,
    "historical": false,
    "scope": "SUNY Trustees",
-   "fetched_at": "2026-11-19T19:00:53.462301+00:00"
+   "fetched_at": "2026-11-20T18:38:34.123068+00:00"
   }
  },
  "schools": [
