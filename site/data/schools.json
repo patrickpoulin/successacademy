@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-22T17:52:34.263735+00:00",
+ "generated_at": "2026-11-23T22:05:07.488464+00:00",
  "sources": {
   "lcgms": {
    "label": "NYC DOE LCGMS school list (current)",
@@ -9,7 +9,7 @@
    "count": 290,
    "historical": false,
    "scope": null,
-   "fetched_at": "2026-11-22T17:52:09.975358+00:00"
+   "fetched_at": "2026-11-23T22:04:31.248851+00:00"
   },
   "opendata": {
    "label": "NYC Open Data school locations (2019-20 snapshot)",
@@ -19,7 +19,7 @@
    "count": 265,
    "historical": true,
    "scope": null,
-   "fetched_at": "2026-11-22T17:52:24.825544+00:00"
+   "fetched_at": "2026-11-23T22:04:36.023349+00:00"
   },
   "nysed": {
    "label": "NYSED data site (state school list)",
@@ -29,17 +29,17 @@
    "count": 286,
    "historical": false,
    "scope": null,
-   "fetched_at": "2026-11-22T17:52:25.820970+00:00"
+   "fetched_at": "2026-11-23T22:04:37.004002+00:00"
   },
   "suny": {
    "label": "SUNY Charter Schools Institute",
    "short": "SUNY",
    "url": "https://www.newyorkcharters.org/charter-schools/",
    "ok": true,
-   "count": 195,
+   "count": 196,
    "historical": false,
    "scope": "SUNY Trustees",
-   "fetched_at": "2026-11-22T17:52:30.231648+00:00"
+   "fetched_at": "2026-11-23T22:04:42.740362+00:00"
   }
  },
  "schools": [
@@ -4356,16 +4356,18 @@
    "lat": 40.718121,
    "lon": -73.984116,
    "grades": "0K,01,02,03,04,05",
-   "authorizer": null,
+   "authorizer": "SUNY Trustees",
    "in": {
     "lcgms": true,
     "opendata": true,
-    "nysed": true
+    "nysed": true,
+    "suny": true
    },
    "names": {
     "lcgms": "Manhattan Charter School",
     "opendata": "Manhattan Charter School",
-    "nysed": "Manhattan Charter School"
+    "nysed": "Manhattan Charter School",
+    "suny": "Manhattan Charter School"
    },
    "issues": []
   },
